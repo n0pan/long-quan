@@ -1,0 +1,16 @@
+body {
+  font-family: 'PT Serif', serif;
+}
+
+header {
+  background-color: rgb(37, 37, 37);
+  text-align: center;
+}
+
+#last-name {
+  text-transform: uppercase;
+}
+
+.wrapper {
+  
+}
