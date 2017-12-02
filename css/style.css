@@ -5,6 +5,17 @@ body {
 header {
   background-color: rgb(37, 37, 37);
   text-align: center;
+  color: #FFF;
+  padding: 15px 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#email {
+  color: #FFF;
+  
 }
 
 #last-name {
@@ -12,5 +23,5 @@ header {
 }
 
 .wrapper {
-  
+  padding: 25px 50px;
 }
