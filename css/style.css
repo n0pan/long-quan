@@ -7,7 +7,6 @@ header {
   background-color: rgb(37, 37, 37);
   text-align: center;
   color: #FFF;
-  padding: 45px 0;
 }
 
 .bold {
@@ -49,7 +48,6 @@ section {
 }
 
 .wrapper {
-  margin: 25px 100px;
   background-color: #ececec;
   border-radius: 2px;
   box-shadow: 0px 2px 1px 0px #DDD;
