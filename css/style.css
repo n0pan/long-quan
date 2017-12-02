@@ -17,16 +17,20 @@ header {
   text-transform: uppercase;
 }
 
-#email {
-  color: #FFF;
+a {
+  color: #FFF !important;
 }
 
-#email:hover {
-  color: #ececec;
+a:hover {
+  color: #ececec !important;
 }
 
 .fa {
   padding-right: 7px;
+}
+
+.italics {
+  font-style: italic;
 }
 
 #name {
@@ -38,13 +42,34 @@ section {
   padding: 30px;
 }
 
+.section {
+  padding-bottom: 15px !important;
+}
+
 .section-title {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgb(37, 37, 37);
   text-transform: uppercase;
   font-weight: 700;
   padding-bottom: 0px;
   margin-bottom: 15px;
   font-size: 125%;
+}
+
+.social {
+  padding-top: 15px;
+}
+
+.social-icon {
+  font-size: 2em !important;
+}
+
+.work-link {
+  color: rgb(37, 37, 37) !important;
+}
+
+.work-link:hover {
+  text-decoration: underline !important;
+  color: initial !important;
 }
 
 .wrapper {
