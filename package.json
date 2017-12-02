@@ -1,0 +1,26 @@
+{
+  "name": "n0pan.github.io",
+  "version": "1.0.0",
+  "description": "personal website for long-quan",
+  "main": "index.html",
+  "dependencies": {
+    "bulma": "^0.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n0pan/n0pan.github.io.git"
+  },
+  "keywords": [
+    "long-quan"
+  ],
+  "author": "LQ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n0pan/n0pan.github.io/issues"
+  },
+  "homepage": "https://github.com/n0pan/n0pan.github.io#readme"
+}
