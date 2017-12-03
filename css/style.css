@@ -4,7 +4,7 @@ body {
 }
 
 header {
-  background-color: rgb(37, 37, 37);
+  background-color: #4a4a4a;
   text-align: center;
   color: #FFF;
 }
@@ -15,6 +15,10 @@ header {
 
 .caps {
   text-transform: uppercase;
+}
+
+.download-btn {
+  font-size: 2em !important;
 }
 
 a {
@@ -29,8 +33,16 @@ a:hover {
   padding-right: 7px;
 }
 
+.footer {
+  padding-top: 15px;
+}
+
 .italics {
   font-style: italic;
+}
+
+#projects {
+  padding-bottom: 3rem !important;
 }
 
 #name {
@@ -47,7 +59,7 @@ section {
 }
 
 .section-title {
-  border-bottom: 1px solid rgb(37, 37, 37);
+  border-bottom: 1px solid #4a4a4a;
   text-transform: uppercase;
   font-weight: 700;
   padding-bottom: 0px;
@@ -63,13 +75,13 @@ section {
   font-size: 2em !important;
 }
 
-.work-link {
-  color: rgb(37, 37, 37) !important;
+.dark-gray {
+  color: #757575 !important;
 }
 
 .work-link:hover {
   text-decoration: underline !important;
-  color: initial !important;
+  color: #757575 !important;
 }
 
 .wrapper {
