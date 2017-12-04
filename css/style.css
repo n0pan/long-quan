@@ -1,5 +1,4 @@
 body {
-  /* font-family: 'PT Serif', serif !important; */
   background-color: #FFF;
 }
 
@@ -29,12 +28,17 @@ a:hover {
   color: #ececec !important;
 }
 
+#cv-link {
+  margin-bottom: 15px;
+}
+
 .fa {
   padding-right: 7px;
 }
 
 .footer {
-  padding-top: 15px;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 
 .italics {
@@ -79,9 +83,14 @@ section {
   color: #757575 !important;
 }
 
-.work-link:hover {
+.hover-underline:hover {
   text-decoration: underline !important;
   color: #757575 !important;
+}
+
+#lq-logo {
+  height: 150px;
+  width: 150px;
 }
 
 .wrapper {
