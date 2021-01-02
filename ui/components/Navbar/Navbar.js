@@ -1,8 +1,15 @@
-function Navbar() {
+import React from "react";
+
+import Logo from "../Logo";
+import ThemeSwitcher from "../ThemeSwitcher";
+import { Header } from "./styles";
+
+function Navbar({ onChangeTheme, currentTheme }) {
   return (
-    <header>
-      <p>This is the navbar.</p>
-    </header>
+    <Header>
+      <Logo />
+      <ThemeSwitcher onChange={onChangeTheme} currentTheme={currentTheme} />
+    </Header>
   );
 }
 

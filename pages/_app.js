@@ -1,37 +1,19 @@
 import Head from "next/head";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ThemeProvider } from "styled-components";
 
 import { Navbar, Footer } from "../ui/components";
+import { useTheme } from "../ui/hooks";
 import { GlobalStyles } from "../ui/globalStyles";
-import { lightTheme, darkTheme, darkerTheme } from "../ui/theme";
 
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState("dark");
-  useEffect(() => {
-    const currentTheme = localStorage.getItem("theme");
-    setTheme(currentTheme || "light");
-  }, []);
-  const onSetTheme = theme => {
-    localStorage.setItem("theme", theme);
-    setTheme(theme);
-  };
-  const getTheme = theme => {
-    switch (theme) {
-      case "light":
-        return lightTheme;
-      case "dark":
-        return darkTheme;
-      case "darker":
-        return darkerTheme;
-      default:
-        return lightTheme;
-    }
-  };
+  const { theme, themeName, setThemeName } = useTheme();
+
+  if (!theme) return null;
   return (
-    <ThemeProvider theme={getTheme(theme)}>
+    <ThemeProvider theme={theme}>
       <Head>
         <title>Long-Quan</title>
         <link rel="icon" href="/favicon.ico" />
@@ -43,7 +25,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <GlobalStyles />
       <main>
-        <Navbar />
+        <Navbar onChangeTheme={setThemeName} currentTheme={themeName} />
         <Component {...pageProps} />
         <Footer />
       </main>
