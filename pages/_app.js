@@ -24,11 +24,11 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <GlobalStyles />
+      <Navbar onChangeTheme={setThemeName} currentTheme={themeName} />
       <main>
-        <Navbar onChangeTheme={setThemeName} currentTheme={themeName} />
         <Component {...pageProps} />
-        <Footer />
       </main>
+      <Footer />
     </ThemeProvider>
   );
 }

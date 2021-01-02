@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default as useTheme } from \"./useTheme\";","map":{"version":3,"sources":["/Users/lq/dev/long-quan/ui/hooks/index.js"],"names":["default","useTheme"],"mappings":"AAAA,SAASA,OAAO,IAAIC,QAApB,QAAoC,YAApC","sourcesContent":["export { default as useTheme } from \"./useTheme\";\n"]},"metadata":{},"sourceType":"module"}

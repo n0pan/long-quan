@@ -11,9 +11,26 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0px;
     height: 100%;
     width: 100%;
+    div#__next {
+      height: 100%;
+    }
   }
   main {
-    padding: 50px;
+    padding: 25px 50px;
+    height: calc(100% - 200px); 
+    @media (min-width: 1920px) {
+      width: 30vw;
+    }
+    @media (min-width: 1200px) and (max-width: 1920px) {
+      width: 40vw;
+    }
+    @media (min-width: 1024px) and (max-width: 1200px) {
+      width: 80vw;
+    }
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+    margin: 0 auto;
   }
   button {
     font-family: "JetBrains Mono", monospace;

@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 
 import { LIGHT, DARK } from "../enums/theme";
-import { lightTheme, darkTheme } from "../theme";
+import { lightTheme, darkTheme, defaultTheme } from "../theme";
 
 function getTheme(themeName) {
   switch (themeName) {
     case LIGHT:
-      return lightTheme;
+      return { ...defaultTheme, ...lightTheme };
     case DARK:
-      return darkTheme;
+      return { ...defaultTheme, ...darkTheme };
     default:
-      return lightTheme;
+      return { ...defaultTheme, ...lightTheme };
   }
 }
 

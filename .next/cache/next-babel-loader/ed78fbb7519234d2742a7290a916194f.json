@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from \"styled-components\";\nexport const FooterContainer = styled.footer`\n  padding: 25px 50px;\n  height: 100px;\n`;","map":null,"metadata":{},"sourceType":"module"}

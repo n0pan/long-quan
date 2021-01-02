@@ -1,8 +1,12 @@
+import React from "react";
+
+import { FooterContainer } from "./styles";
+
 function Footer() {
   return (
-    <footer>
-      <p>This is the footer.</p>
-    </footer>
+    <FooterContainer>
+      <p>Made using React and Next.js.</p>
+    </FooterContainer>
   );
 }
 
