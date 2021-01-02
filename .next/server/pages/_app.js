@@ -200,7 +200,6 @@ var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(exte
 
 // EXTERNAL MODULE: ./node_modules/next/link.js
 var next_link = __webpack_require__("YFqc");
-var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 
 // EXTERNAL MODULE: external "next/router"
 var router_ = __webpack_require__("4Q3z");
@@ -276,21 +275,62 @@ function ThemeSwitcher({
 // CONCATENATED MODULE: ./ui/components/ThemeSwitcher/index.js
 
 /* harmony default export */ var components_ThemeSwitcher = (ThemeSwitcher_ThemeSwitcher);
+// EXTERNAL MODULE: ./node_modules/next/image.js
+var next_image = __webpack_require__("Aiso");
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+
+// CONCATENATED MODULE: ./ui/components/ProfilePicture/styles.js
+
+const PictureContainer = external_styled_components_default.a.div.withConfig({
+  displayName: "styles__PictureContainer",
+  componentId: "sc-1uh5nxr-0"
+})(["padding:25px 15px;div{text-align:center;height:150px;width:150px;position:relative;margin:0 auto;}"]);
+// CONCATENATED MODULE: ./ui/components/ProfilePicture/ProfilePicture.js
+
+
+
+
+
+function ProfilePicture() {
+  return /*#__PURE__*/Object(jsx_runtime_["jsx"])(PictureContainer, {
+    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
+        className: "rounded",
+        src: "/images/lq_2.jpg",
+        alt: "Long-Quan",
+        layout: "fill",
+        objectFit: "cover",
+        objectPosition: "top",
+        quality: 75
+      })
+    })
+  });
+}
+
+/* harmony default export */ var ProfilePicture_ProfilePicture = (ProfilePicture);
+// CONCATENATED MODULE: ./ui/components/ProfilePicture/index.js
+
+/* harmony default export */ var components_ProfilePicture = (ProfilePicture_ProfilePicture);
 // CONCATENATED MODULE: ./ui/components/Navbar/styles.js
 
 const Header = external_styled_components_default.a.header.withConfig({
   displayName: "styles__Header",
   componentId: "cn10d8-0"
-})(["display:flex;flex-direction:row;justify-content:space-between;padding:20px 50px;height:100px;"]);
+})(["display:flex;flex-direction:column;padding:50px 50px 20px 50px;height:350px;"]);
+const NameContainer = external_styled_components_default.a.div.withConfig({
+  displayName: "styles__NameContainer",
+  componentId: "cn10d8-1"
+})(["text-align:center;"]);
 const NavigationContainer = external_styled_components_default.a.ul.withConfig({
   displayName: "styles__NavigationContainer",
-  componentId: "cn10d8-1"
-})(["list-style-type:none;display:flex;flex-direction:row;li{margin-right:25px;display:flex;align-self:center;}"]);
+  componentId: "cn10d8-2"
+})(["list-style-type:none;display:flex;flex-direction:row;text-align:center;li{margin-right:25px;display:flex;align-self:center;}"]);
 const NavLink = external_styled_components_default.a.a.withConfig({
   displayName: "styles__NavLink",
-  componentId: "cn10d8-2"
+  componentId: "cn10d8-3"
 })(["cursor:pointer;color:", ";"], props => props.isSelected ? props.theme.primary : props.theme.text);
 // CONCATENATED MODULE: ./ui/components/Navbar/Navbar.js
+
 
 
 
@@ -306,35 +346,18 @@ function Navbar({
 }) {
   const router = Object(router_["useRouter"])();
   return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(Header, {
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Logo, {}), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(NavigationContainer, {
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("li", {
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-          href: "/",
-          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(NavLink, {
-            isSelected: router.pathname === "/",
-            children: "Home"
-          })
-        })
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("li", {
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-          href: "/about",
-          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(NavLink, {
-            isSelected: router.pathname === "/about",
-            children: "About me"
-          })
-        })
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("li", {
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-          href: "/contact",
-          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(NavLink, {
-            isSelected: router.pathname === "/contact",
-            children: "Contact"
-          })
-        })
-      })]
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ThemeSwitcher, {
-      onChange: onChangeTheme,
-      currentTheme: currentTheme
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])(NameContainer, {
+      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ProfilePicture, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Logo, {})]
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+      style: {
+        position: "absolute",
+        right: 50,
+        top: 15
+      },
+      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ThemeSwitcher, {
+        onChange: onChangeTheme,
+        currentTheme: currentTheme
+      })
     })]
   });
 }
@@ -465,7 +488,7 @@ const GlobalStyles = external_styled_components_["createGlobalStyle"]`
   }
   main {
     padding: 25px 50px;
-    height: calc(100% - 200px); 
+    height: calc(100% - 450px); 
     @media (min-width: 1920px) {
       width: 30vw;
     }
@@ -830,6 +853,50 @@ function formatUrl(urlObj) {
   search = search.replace('#', '%23');
   return `${protocol}${host}${pathname}${search}${hash}`;
 }
+
+/***/ }),
+
+/***/ "7UUK":
+/***/ (function(module, exports) {
+
+module.exports = require("next/dist/next-server/lib/to-base-64.js");
+
+/***/ }),
+
+/***/ "8OQS":
+/***/ (function(module, exports) {
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+module.exports = _objectWithoutPropertiesLoose;
+
+/***/ }),
+
+/***/ "ANQk":
+/***/ (function(module, exports) {
+
+module.exports = require("next/dist/next-server/server/image-config.js");
+
+/***/ }),
+
+/***/ "Aiso":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("dQHF")
+
 
 /***/ }),
 
@@ -1501,6 +1568,367 @@ function Link(props) {
 
 var _default = Link;
 exports.default = _default;
+
+/***/ }),
+
+/***/ "dQHF":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__("TqRt");
+
+exports.__esModule = true;
+exports.default = Image;
+
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__("8OQS"));
+
+var _extends2 = _interopRequireDefault(__webpack_require__("pVnL"));
+
+var _react = _interopRequireDefault(__webpack_require__("cDcd"));
+
+var _toBase = __webpack_require__("7UUK");
+
+var _imageConfig = __webpack_require__("ANQk");
+
+var _useIntersection = __webpack_require__("vNVm");
+
+if (true) {
+  ;
+  global.__NEXT_IMAGE_IMPORTED = true;
+}
+
+const VALID_LOADING_VALUES = ['lazy', 'eager', undefined];
+const loaders = new Map([['imgix', imgixLoader], ['cloudinary', cloudinaryLoader], ['akamai', akamaiLoader], ['default', defaultLoader]]);
+const VALID_LAYOUT_VALUES = ['fill', 'fixed', 'intrinsic', 'responsive', undefined];
+const {
+  deviceSizes: configDeviceSizes,
+  imageSizes: configImageSizes,
+  loader: configLoader,
+  path: configPath,
+  domains: configDomains
+} = {"deviceSizes":[640,750,828,1080,1200,1920,2048,3840],"imageSizes":[16,32,48,64,96,128,256,384],"path":"/_next/image","loader":"default"} || _imageConfig.imageConfigDefault; // sort smallest to largest
+
+const allSizes = [...configDeviceSizes, ...configImageSizes];
+configDeviceSizes.sort((a, b) => a - b);
+allSizes.sort((a, b) => a - b);
+
+function getWidths(width, layout) {
+  if (typeof width !== 'number' || layout === 'fill' || layout === 'responsive') {
+    return {
+      widths: configDeviceSizes,
+      kind: 'w'
+    };
+  }
+
+  const widths = [...new Set([width, width * 2, width * 3].map(w => allSizes.find(p => p >= w) || allSizes[allSizes.length - 1]))];
+  return {
+    widths,
+    kind: 'x'
+  };
+}
+
+function callLoader(loaderProps) {
+  const load = loaders.get(configLoader);
+
+  if (load) {
+    return load((0, _extends2.default)({
+      root: configPath
+    }, loaderProps));
+  }
+
+  throw new Error(`Unknown "loader" found in "next.config.js". Expected: ${_imageConfig.VALID_LOADERS.join(', ')}. Received: ${configLoader}`);
+}
+
+function generateImgAttrs({
+  src,
+  unoptimized,
+  layout,
+  width,
+  quality,
+  sizes
+}) {
+  if (unoptimized) {
+    return {
+      src
+    };
+  }
+
+  const {
+    widths,
+    kind
+  } = getWidths(width, layout);
+  const last = widths.length - 1;
+  const srcSet = widths.map((w, i) => `${callLoader({
+    src,
+    quality,
+    width: w
+  })} ${kind === 'w' ? w : i + 1}${kind}`).join(', ');
+
+  if (!sizes && kind === 'w') {
+    sizes = '100vw';
+  }
+
+  src = callLoader({
+    src,
+    quality,
+    width: widths[last]
+  });
+  return {
+    src,
+    sizes,
+    srcSet
+  };
+}
+
+function getInt(x) {
+  if (typeof x === 'number') {
+    return x;
+  }
+
+  if (typeof x === 'string') {
+    return parseInt(x, 10);
+  }
+
+  return undefined;
+}
+
+function Image(_ref) {
+  let {
+    src,
+    sizes,
+    unoptimized = false,
+    priority = false,
+    loading,
+    className,
+    quality,
+    width,
+    height,
+    objectFit,
+    objectPosition
+  } = _ref,
+      all = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["src", "sizes", "unoptimized", "priority", "loading", "className", "quality", "width", "height", "objectFit", "objectPosition"]);
+  let rest = all;
+  let layout = sizes ? 'responsive' : 'intrinsic';
+  let unsized = false;
+
+  if ('unsized' in rest) {
+    unsized = Boolean(rest.unsized); // Remove property so it's not spread into image:
+
+    delete rest['unsized'];
+  } else if ('layout' in rest) {
+    // Override default layout if the user specified one:
+    if (rest.layout) layout = rest.layout; // Remove property so it's not spread into image:
+
+    delete rest['layout'];
+  }
+
+  if (false) {}
+
+  let isLazy = !priority && (loading === 'lazy' || typeof loading === 'undefined');
+
+  if (src && src.startsWith('data:')) {
+    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+    unoptimized = true;
+    isLazy = false;
+  }
+
+  const [setRef, isIntersected] = (0, _useIntersection.useIntersection)({
+    rootMargin: '200px',
+    disabled: !isLazy
+  });
+  const isVisible = !isLazy || isIntersected;
+  const widthInt = getInt(width);
+  const heightInt = getInt(height);
+  const qualityInt = getInt(quality);
+  let wrapperStyle;
+  let sizerStyle;
+  let sizerSvg;
+  let imgStyle = {
+    visibility: isVisible ? 'visible' : 'hidden',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    boxSizing: 'border-box',
+    padding: 0,
+    border: 'none',
+    margin: 'auto',
+    display: 'block',
+    width: 0,
+    height: 0,
+    minWidth: '100%',
+    maxWidth: '100%',
+    minHeight: '100%',
+    maxHeight: '100%',
+    objectFit,
+    objectPosition
+  };
+
+  if (typeof widthInt !== 'undefined' && typeof heightInt !== 'undefined' && layout !== 'fill') {
+    // <Image src="i.png" width="100" height="100" />
+    const quotient = heightInt / widthInt;
+    const paddingTop = isNaN(quotient) ? '100%' : `${quotient * 100}%`;
+
+    if (layout === 'responsive') {
+      // <Image src="i.png" width="100" height="100" layout="responsive" />
+      wrapperStyle = {
+        display: 'block',
+        overflow: 'hidden',
+        position: 'relative',
+        boxSizing: 'border-box',
+        margin: 0
+      };
+      sizerStyle = {
+        display: 'block',
+        boxSizing: 'border-box',
+        paddingTop
+      };
+    } else if (layout === 'intrinsic') {
+      // <Image src="i.png" width="100" height="100" layout="intrinsic" />
+      wrapperStyle = {
+        display: 'inline-block',
+        maxWidth: '100%',
+        overflow: 'hidden',
+        position: 'relative',
+        boxSizing: 'border-box',
+        margin: 0
+      };
+      sizerStyle = {
+        boxSizing: 'border-box',
+        display: 'block',
+        maxWidth: '100%'
+      };
+      sizerSvg = `<svg width="${widthInt}" height="${heightInt}" xmlns="http://www.w3.org/2000/svg" version="1.1"/>`;
+    } else if (layout === 'fixed') {
+      // <Image src="i.png" width="100" height="100" layout="fixed" />
+      wrapperStyle = {
+        overflow: 'hidden',
+        boxSizing: 'border-box',
+        display: 'inline-block',
+        position: 'relative',
+        width: widthInt,
+        height: heightInt
+      };
+    }
+  } else if (typeof widthInt === 'undefined' && typeof heightInt === 'undefined' && layout === 'fill') {
+    // <Image src="i.png" layout="fill" />
+    wrapperStyle = {
+      display: 'block',
+      overflow: 'hidden',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0,
+      boxSizing: 'border-box',
+      margin: 0
+    };
+  } else {
+    // <Image src="i.png" />
+    if (false) {}
+  }
+
+  let imgAttributes = {
+    src: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+  };
+
+  if (isVisible) {
+    imgAttributes = generateImgAttrs({
+      src,
+      unoptimized,
+      layout,
+      width: widthInt,
+      quality: qualityInt,
+      sizes
+    });
+  }
+
+  if (unsized) {
+    wrapperStyle = undefined;
+    sizerStyle = undefined;
+    imgStyle = undefined;
+  }
+
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: wrapperStyle
+  }, sizerStyle ? /*#__PURE__*/_react.default.createElement("div", {
+    style: sizerStyle
+  }, sizerSvg ? /*#__PURE__*/_react.default.createElement("img", {
+    style: {
+      maxWidth: '100%',
+      display: 'block'
+    },
+    alt: "",
+    "aria-hidden": true,
+    role: "presentation",
+    src: `data:image/svg+xml;base64,${(0, _toBase.toBase64)(sizerSvg)}`
+  }) : null) : null, /*#__PURE__*/_react.default.createElement("img", Object.assign({}, rest, imgAttributes, {
+    decoding: "async",
+    className: className,
+    ref: setRef,
+    style: imgStyle
+  })));
+} //BUILT IN LOADERS
+
+
+function normalizeSrc(src) {
+  return src[0] === '/' ? src.slice(1) : src;
+}
+
+function imgixLoader({
+  root,
+  src,
+  width,
+  quality
+}) {
+  // Demo: https://static.imgix.net/daisy.png?format=auto&fit=max&w=300
+  const params = ['auto=format', 'fit=max', 'w=' + width];
+  let paramsString = '';
+
+  if (quality) {
+    params.push('q=' + quality);
+  }
+
+  if (params.length) {
+    paramsString = '?' + params.join('&');
+  }
+
+  return `${root}${normalizeSrc(src)}${paramsString}`;
+}
+
+function akamaiLoader({
+  root,
+  src,
+  width
+}) {
+  return `${root}${normalizeSrc(src)}?imwidth=${width}`;
+}
+
+function cloudinaryLoader({
+  root,
+  src,
+  width,
+  quality
+}) {
+  // Demo: https://res.cloudinary.com/demo/image/upload/w_300,c_limit,q_auto/turtles.jpg
+  const params = ['f_auto', 'c_limit', 'w_' + width, 'q_' + (quality || 'auto')];
+  let paramsString = params.join(',') + '/';
+  return `${root}${paramsString}${normalizeSrc(src)}`;
+}
+
+function defaultLoader({
+  root,
+  src,
+  width,
+  quality
+}) {
+  if (false) {}
+
+  return `${root}?url=${encodeURIComponent(src)}&w=${width}&q=${quality || 75}`;
+}
 
 /***/ }),
 
@@ -2912,6 +3340,31 @@ function makePublicRouterInstance(router) {
   });
   return instance;
 }
+
+/***/ }),
+
+/***/ "pVnL":
+/***/ (function(module, exports) {
+
+function _extends() {
+  module.exports = _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+module.exports = _extends;
 
 /***/ }),
 

@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   main {
     padding: 25px 50px;
-    height: calc(100% - 200px); 
+    height: calc(100% - 450px); 
     @media (min-width: 1920px) {
       width: 30vw;
     }
