@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from \"styled-components\";\nexport const TextLogo = styled.h1`\n  display: inline-block;\n  font-weight: 400;\n  font-size: 24px;\n  \n  span {\n    text-transform: uppercase;\n    font-weight: 800;\n    color: red;\n  }\n`;","map":null,"metadata":{},"sourceType":"module"}

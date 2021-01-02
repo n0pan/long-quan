@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import { LIGHT, DARK, DARKER } from "../enums/theme";
-import { lightTheme, darkTheme, darkerTheme } from "../theme";
+import { LIGHT, DARK } from "../enums/theme";
+import { lightTheme, darkTheme } from "../theme";
 
 function getTheme(themeName) {
   switch (themeName) {
@@ -9,8 +9,6 @@ function getTheme(themeName) {
       return lightTheme;
     case DARK:
       return darkTheme;
-    case DARKER:
-      return darkerTheme;
     default:
       return lightTheme;
   }
