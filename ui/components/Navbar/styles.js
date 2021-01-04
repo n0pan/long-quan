@@ -13,13 +13,10 @@ export const NameContainer = styled.div`
 
 export const NavigationContainer = styled.ul`
   list-style-type: none;
-  display: flex;
-  flex-direction: row;
   text-align: center;
   li {
     margin-right: 25px;
-    display: flex;
-    align-self: center;
+    display: inline;
   }
 `;
 

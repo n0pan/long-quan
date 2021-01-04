@@ -5,9 +5,9 @@ export const lightTheme = {
 
 export const darkTheme = {
   text: "#FFF",
-  background: "#090b10"
+  background: "#0B0F12"
 };
 
 export const defaultTheme = {
-  primary: "red"
+  primary: "#E7555A"
 };

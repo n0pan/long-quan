@@ -15,27 +15,29 @@ function Navbar({ onChangeTheme, currentTheme }) {
         <ProfilePicture />
         <Logo />
       </NameContainer>
-      {/* <NavigationContainer> */}
-      {/*   <li> */}
-      {/*     <Link href="/"> */}
-      {/*       <NavLink isSelected={router.pathname === "/"}>Home</NavLink> */}
-      {/*     </Link> */}
-      {/*   </li> */}
-      {/*   <li> */}
-      {/*     <Link href="/about"> */}
-      {/*       <NavLink isSelected={router.pathname === "/about"}> */}
-      {/*         About me */}
-      {/*       </NavLink> */}
-      {/*     </Link> */}
-      {/*   </li> */}
-      {/*   <li> */}
-      {/*     <Link href="/contact"> */}
-      {/*       <NavLink isSelected={router.pathname === "/contact"}> */}
-      {/*         Contact */}
-      {/*       </NavLink> */}
-      {/*     </Link> */}
-      {/*   </li> */}
-      {/* </NavigationContainer> */}
+      <div style={{ textAlign: "center" }}>
+        <NavigationContainer>
+          <li>
+            <Link href="/">
+              <NavLink isSelected={router.pathname === "/"}>Home</NavLink>
+            </Link>
+          </li>
+          {/* <li> */}
+          {/*   <Link href="/projects"> */}
+          {/*     <NavLink isSelected={router.pathname === "/projects"}> */}
+          {/*       Projects */}
+          {/*     </NavLink> */}
+          {/*   </Link> */}
+          {/* </li> */}
+          <li>
+            <Link href="/contact">
+              <NavLink isSelected={router.pathname === "/contact"}>
+                Contact
+              </NavLink>
+            </Link>
+          </li>
+        </NavigationContainer>
+      </div>
       <div style={{ position: "absolute", right: 50, top: 15 }}>
         <ThemeSwitcher onChange={onChangeTheme} currentTheme={currentTheme} />
       </div>

@@ -11,9 +11,6 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0px;
     height: 100%;
     width: 100%;
-    div#__next {
-      height: 100%;
-    }
   }
   main {
     padding: 25px 50px;
@@ -37,6 +34,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
-    color: red;
+    color: ${({ theme }) => theme.primary};
   }
 `;
