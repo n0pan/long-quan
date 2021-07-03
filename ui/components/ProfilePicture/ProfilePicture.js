@@ -10,11 +10,11 @@ function ProfilePicture() {
       <div>
         <Image
           className="rounded"
-          src="/images/lq_2.jpg"
+          src="/images/rounded-pro-pic.png"
           alt="Long-Quan"
           layout="fill"
           objectFit="cover"
-          objectPosition="top"
+          objectPosition="center"
           quality={75}
         />
       </div>

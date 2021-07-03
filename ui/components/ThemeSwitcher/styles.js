@@ -4,6 +4,7 @@ export const ButtonContainer = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
 `;
 
 export const Button = styled.button`

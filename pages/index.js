@@ -1,14 +1,26 @@
 import React from "react";
+import styled from "styled-components";
 
 function Home() {
   return (
-    <div>
+    <Container>
       <p>
-        Hello, I'm Long-Quan. I'm a web developer from{" "}
-        <span>Montréal, Canada</span> who specializes in front-end development.
+        Take a look at my CV in{" "}
+        <a href="/cv/hoang-pham_long-quan_fr.pdf" target="blank">
+          French
+        </a>{" "}
+        and{" "}
+        <a href="/cv/hoang-pham_long-quan_en.pdf" target="blank">
+          English
+        </a>
+        .
       </p>
-    </div>
+    </Container>
   );
 }
 
 export default Home;
+
+const Container = styled.div`
+  text-align: center;
+`;

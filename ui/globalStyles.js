@@ -1,6 +1,19 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+  #__next {
+    height: 100%;
+  }
+
+  h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 36px;
+  }
+
+  span.highlight {
+    color: ${({ theme }) => theme.primary};
+  }
+
   html, body {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.text};
@@ -12,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
     width: 100%;
   }
+
   main {
     padding: 25px 50px;
     height: calc(100% - 450px); 
@@ -29,11 +43,25 @@ export const GlobalStyles = createGlobalStyle`
     }
     margin: 0 auto;
   }
+
   button {
     font-family: "JetBrains Mono", monospace;
   }
+
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.primary};
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .rounded {
+    border-radius: 100%;
+  }
+
+  ul {
+    list-style-type: none;
   }
 `;
