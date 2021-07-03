@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 function Home({ currentTheme }) {
-  console.log("currentTheme: ", currentTheme);
   return (
     <Container>
       <p>Hi, I'm Long-Quan.</p>
