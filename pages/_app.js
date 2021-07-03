@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
         <ThemeSwitcher onChange={setThemeName} currentTheme={themeName} />
         <ContentContainer>
           <ProfileHeader />
-          <Component {...pageProps} />
+          <Component {...pageProps} currentTheme={themeName} />
         </ContentContainer>
         <Footer />
       </AppContainer>
