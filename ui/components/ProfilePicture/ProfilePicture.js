@@ -15,17 +15,17 @@ function ProfilePicture() {
   }
 
   return (
-    <div
-      role="button"
-      onClick={() => randomizeProfilePicture()}
-      style={{ padding: "0px 15px", cursor: "pointer" }}>
+    <div style={{ padding: "0px 15px" }}>
       <div
+        role="button"
+        onClick={() => randomizeProfilePicture()}
         style={{
           textAlign: "center",
           height: 200,
           width: 200,
           position: "relative",
-          margin: "0 auto"
+          margin: "0 auto",
+          cursor: "pointer"
         }}>
         <Image
           className="rounded"
