@@ -31,6 +31,9 @@ function MyApp({ Component, pageProps }) {
         <ContentContainer>
           <ProfileHeader />
           <Component {...pageProps} currentTheme={themeName} />
+          <p>
+            something
+          </p>
         </ContentContainer>
         <Footer />
       </AppContainer>
