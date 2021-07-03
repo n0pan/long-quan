@@ -1,1 +1,7 @@
-{"ast":null,"code":"export var LIGHT = \"light\";\nexport var DARK = \"dark\";\nexport var DARKER = \"darker\";","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "export var LIGHT = \"light\";\nexport var DARK = \"dark\";\nexport var DARKER = \"darker\";",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

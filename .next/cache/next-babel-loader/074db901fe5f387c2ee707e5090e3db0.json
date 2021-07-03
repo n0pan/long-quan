@@ -1,0 +1,25 @@
+{
+  "ast": null,
+  "code": "import { jsxDEV as _jsxDEV } from \"react/jsx-dev-runtime\";\nvar _jsxFileName = \"/Users/lq/dev/long-quan/ui/components/Footer/Footer.js\";\nimport React from \"react\";\nimport Link from \"next/link\";\nimport { useRouter } from \"next/router\";\nimport { FooterContainer, NavigationContainer, NavLink } from \"./styles\";\n\nfunction Footer() {\n  const router = useRouter();\n  return /*#__PURE__*/_jsxDEV(FooterContainer, {\n    children: /*#__PURE__*/_jsxDEV(NavigationContainer, {\n      children: [/*#__PURE__*/_jsxDEV(\"li\", {\n        children: /*#__PURE__*/_jsxDEV(Link, {\n          href: \"/\",\n          children: /*#__PURE__*/_jsxDEV(NavLink, {\n            isSelected: router.pathname === \"/\",\n            children: \"Home\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 14,\n            columnNumber: 13\n          }, this)\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 13,\n          columnNumber: 11\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 12,\n        columnNumber: 9\n      }, this), /*#__PURE__*/_jsxDEV(\"li\", {\n        children: /*#__PURE__*/_jsxDEV(Link, {\n          href: \"/contact\",\n          children: /*#__PURE__*/_jsxDEV(NavLink, {\n            isSelected: router.pathname === \"/contact\",\n            children: \"Contact\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 19,\n            columnNumber: 13\n          }, this)\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 18,\n          columnNumber: 11\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 17,\n        columnNumber: 9\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 11,\n      columnNumber: 7\n    }, this)\n  }, void 0, false, {\n    fileName: _jsxFileName,\n    lineNumber: 10,\n    columnNumber: 5\n  }, this);\n}\n\nexport default Footer;",
+  "map": {
+    "version": 3,
+    "sources": ["/Users/lq/dev/long-quan/ui/components/Footer/Footer.js"],
+    "names": [
+      "React",
+      "Link",
+      "useRouter",
+      "FooterContainer",
+      "NavigationContainer",
+      "NavLink",
+      "Footer",
+      "router",
+      "pathname"
+    ],
+    "mappings": ";;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,OAAOC,IAAP,MAAiB,WAAjB;AACA,SAASC,SAAT,QAA0B,aAA1B;AAEA,SAASC,eAAT,EAA0BC,mBAA1B,EAA+CC,OAA/C,QAA8D,UAA9D;;AAEA,SAASC,MAAT,GAAkB;AAChB,QAAMC,MAAM,GAAGL,SAAS,EAAxB;AACA,sBACE,QAAC,eAAD;AAAA,2BACE,QAAC,mBAAD;AAAA,8BACE;AAAA,+BACE,QAAC,IAAD;AAAM,UAAA,IAAI,EAAC,GAAX;AAAA,iCACE,QAAC,OAAD;AAAS,YAAA,UAAU,EAAEK,MAAM,CAACC,QAAP,KAAoB,GAAzC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AADF;AAAA;AAAA;AAAA;AAAA;AADF;AAAA;AAAA;AAAA;AAAA,cADF,eAME;AAAA,+BACE,QAAC,IAAD;AAAM,UAAA,IAAI,EAAC,UAAX;AAAA,iCACE,QAAC,OAAD;AAAS,YAAA,UAAU,EAAED,MAAM,CAACC,QAAP,KAAoB,UAAzC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AADF;AAAA;AAAA;AAAA;AAAA;AADF;AAAA;AAAA;AAAA;AAAA,cANF;AAAA;AAAA;AAAA;AAAA;AAAA;AADF;AAAA;AAAA;AAAA;AAAA,UADF;AAgBD;;AAED,eAAeF,MAAf",
+    "sourcesContent": [
+      "import React from \"react\";\nimport Link from \"next/link\";\nimport { useRouter } from \"next/router\";\n\nimport { FooterContainer, NavigationContainer, NavLink } from \"./styles\";\n\nfunction Footer() {\n  const router = useRouter();\n  return (\n    <FooterContainer>\n      <NavigationContainer>\n        <li>\n          <Link href=\"/\">\n            <NavLink isSelected={router.pathname === \"/\"}>Home</NavLink>\n          </Link>\n        </li>\n        <li>\n          <Link href=\"/contact\">\n            <NavLink isSelected={router.pathname === \"/contact\"}>Contact</NavLink>\n          </Link>\n        </li>\n      </NavigationContainer>\n    </FooterContainer>\n  );\n}\n\nexport default Footer;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

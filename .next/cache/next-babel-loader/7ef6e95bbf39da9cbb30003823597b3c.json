@@ -1,1 +1,7 @@
-{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from \"react\";\nimport Image from \"next/image\";\n\nfunction ProfilePicture() {\n  return /*#__PURE__*/_jsx(\"div\", {\n    style: {\n      padding: \"0px 15px\"\n    },\n    children: /*#__PURE__*/_jsx(\"div\", {\n      style: {\n        textAlign: \"center\",\n        height: 200,\n        width: 200,\n        position: \"relative\",\n        margin: \"0 auto\"\n      },\n      children: /*#__PURE__*/_jsx(Image, {\n        className: \"rounded\",\n        src: \"/images/rounded-pro-pic.png\",\n        alt: \"Long-Quan\",\n        layout: \"fill\",\n        objectFit: \"cover\",\n        objectPosition: \"center\",\n        quality: 75\n      })\n    })\n  });\n}\n\nexport default ProfilePicture;","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from \"react\";\nimport Image from \"next/image\";\n\nfunction ProfilePicture() {\n  return /*#__PURE__*/_jsx(\"div\", {\n    style: {\n      padding: \"0px 15px\"\n    },\n    children: /*#__PURE__*/_jsx(\"div\", {\n      style: {\n        textAlign: \"center\",\n        height: 200,\n        width: 200,\n        position: \"relative\",\n        margin: \"0 auto\"\n      },\n      children: /*#__PURE__*/_jsx(Image, {\n        className: \"rounded\",\n        src: \"/images/rounded-pro-pic.png\",\n        alt: \"Long-Quan\",\n        layout: \"fill\",\n        objectFit: \"cover\",\n        objectPosition: \"center\",\n        quality: 75\n      })\n    })\n  });\n}\n\nexport default ProfilePicture;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

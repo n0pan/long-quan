@@ -1,1 +1,7 @@
-{"ast":null,"code":"export function getRandomInt(min, max) {\n  return Math.floor(Math.random() * (max - min) + min);\n}","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "export function getRandomInt(min, max) {\n  return Math.floor(Math.random() * (max - min) + min);\n}",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

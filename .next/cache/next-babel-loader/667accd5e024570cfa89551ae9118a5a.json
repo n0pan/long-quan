@@ -1,1 +1,7 @@
-{"ast":null,"code":"import ThemeSwitcher from \"./ThemeSwitcher\";\nexport default ThemeSwitcher;","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import ThemeSwitcher from \"./ThemeSwitcher\";\nexport default ThemeSwitcher;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

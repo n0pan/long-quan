@@ -1,1 +1,7 @@
-{"ast":null,"code":"export { default as Navbar } from \"./Navbar\";\nexport { default as Footer } from \"./Footer\";","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "export { default as Navbar } from \"./Navbar\";\nexport { default as Footer } from \"./Footer\";",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

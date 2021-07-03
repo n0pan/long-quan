@@ -5,9 +5,7 @@ import ProfilePicture from "../ProfilePicture";
 
 function ProfileHeader() {
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", textAlign: "center" }}
-    >
+    <div style={{ display: "flex", flexDirection: "column", textAlign: "center" }}>
       <ProfilePicture />
       <Logo />
     </div>

@@ -12,6 +12,6 @@ export const Button = styled.button`
   background: transparent;
   outline: transparent;
   border: none;
-  color: ${props => (props.isSelected ? props.theme.primary : props.theme.text)};
+  color: ${(props) => (props.isSelected ? props.theme.primary : props.theme.text)};
   font-size: inherit;
 `;

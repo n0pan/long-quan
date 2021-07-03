@@ -1,1 +1,15 @@
-{"ast":null,"code":"export var lightTheme = {\n  text: \"#000\",\n  background: \"#FFF\"\n};\nexport var darkTheme = {\n  text: \"#FFF\",\n  background: \"#090b10\"\n};\nexport var defaultTheme = {\n  primary: \"red\"\n};","map":{"version":3,"sources":["/Users/n0pan/dev/long-quan/ui/theme.js"],"names":["lightTheme","text","background","darkTheme","defaultTheme","primary"],"mappings":"AAAA,OAAO,IAAMA,UAAU,GAAG;AACxBC,EAAAA,IAAI,EAAE,MADkB;AAExBC,EAAAA,UAAU,EAAE;AAFY,CAAnB;AAKP,OAAO,IAAMC,SAAS,GAAG;AACvBF,EAAAA,IAAI,EAAE,MADiB;AAEvBC,EAAAA,UAAU,EAAE;AAFW,CAAlB;AAKP,OAAO,IAAME,YAAY,GAAG;AAC1BC,EAAAA,OAAO,EAAE;AADiB,CAArB","sourcesContent":["export const lightTheme = {\n  text: \"#000\",\n  background: \"#FFF\"\n};\n\nexport const darkTheme = {\n  text: \"#FFF\",\n  background: \"#090b10\"\n};\n\nexport const defaultTheme = {\n  primary: \"red\"\n};\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "export var lightTheme = {\n  text: \"#000\",\n  background: \"#FFF\"\n};\nexport var darkTheme = {\n  text: \"#FFF\",\n  background: \"#090b10\"\n};\nexport var defaultTheme = {\n  primary: \"red\"\n};",
+  "map": {
+    "version": 3,
+    "sources": ["/Users/n0pan/dev/long-quan/ui/theme.js"],
+    "names": ["lightTheme", "text", "background", "darkTheme", "defaultTheme", "primary"],
+    "mappings": "AAAA,OAAO,IAAMA,UAAU,GAAG;AACxBC,EAAAA,IAAI,EAAE,MADkB;AAExBC,EAAAA,UAAU,EAAE;AAFY,CAAnB;AAKP,OAAO,IAAMC,SAAS,GAAG;AACvBF,EAAAA,IAAI,EAAE,MADiB;AAEvBC,EAAAA,UAAU,EAAE;AAFW,CAAlB;AAKP,OAAO,IAAME,YAAY,GAAG;AAC1BC,EAAAA,OAAO,EAAE;AADiB,CAArB",
+    "sourcesContent": [
+      "export const lightTheme = {\n  text: \"#000\",\n  background: \"#FFF\"\n};\n\nexport const darkTheme = {\n  text: \"#FFF\",\n  background: \"#090b10\"\n};\n\nexport const defaultTheme = {\n  primary: \"red\"\n};\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

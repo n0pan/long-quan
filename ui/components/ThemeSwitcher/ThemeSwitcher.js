@@ -10,8 +10,7 @@ function ThemeSwitcher({ onChange, currentTheme }) {
         <Button
           isSelected={currentTheme === LIGHT}
           value={LIGHT}
-          onClick={e => onChange(e.currentTarget.value)}
-        >
+          onClick={(e) => onChange(e.currentTarget.value)}>
           Light
         </Button>
       </li>
@@ -19,8 +18,7 @@ function ThemeSwitcher({ onChange, currentTheme }) {
         <Button
           isSelected={currentTheme === DARK}
           value={DARK}
-          onClick={e => onChange(e.currentTarget.value)}
-        >
+          onClick={(e) => onChange(e.currentTarget.value)}>
           Dark
         </Button>
       </li>

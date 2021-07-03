@@ -1,1 +1,7 @@
-{"ast":null,"code":"import styled from \"styled-components\";\nexport const TextLogo = styled.h1.withConfig({\n  displayName: \"styles__TextLogo\",\n  componentId: \"e5t6wu-0\"\n})([\"display:inline-block;font-weight:400;font-size:24px;span{text-transform:uppercase;font-weight:800;color:\", \";}\"], ({\n  theme\n}) => theme.primary);","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import styled from \"styled-components\";\nexport const TextLogo = styled.h1.withConfig({\n  displayName: \"styles__TextLogo\",\n  componentId: \"e5t6wu-0\"\n})([\"display:inline-block;font-weight:400;font-size:24px;span{text-transform:uppercase;font-weight:800;color:\", \";}\"], ({\n  theme\n}) => theme.primary);",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

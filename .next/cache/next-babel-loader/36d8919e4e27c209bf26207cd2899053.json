@@ -1,1 +1,7 @@
-{"ast":null,"code":"import styled from \"styled-components\";\nexport const Header = styled.header.withConfig({\n  displayName: \"styles__Header\",\n  componentId: \"cn10d8-0\"\n})([\"display:flex;flex-direction:row;justify-content:space-between;padding:20px 50px;height:100px;\"]);\nexport const NavigationContainer = styled.ul.withConfig({\n  displayName: \"styles__NavigationContainer\",\n  componentId: \"cn10d8-1\"\n})([\"list-style-type:none;display:flex;flex-direction:row;li{margin-right:25px;}\"]);\nexport const NavLink = styled.a.withConfig({\n  displayName: \"styles__NavLink\",\n  componentId: \"cn10d8-2\"\n})([\"color:\", \";\"], props => props.isSelected ? props.theme.primary : props.theme.text);","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import styled from \"styled-components\";\nexport const Header = styled.header.withConfig({\n  displayName: \"styles__Header\",\n  componentId: \"cn10d8-0\"\n})([\"display:flex;flex-direction:row;justify-content:space-between;padding:20px 50px;height:100px;\"]);\nexport const NavigationContainer = styled.ul.withConfig({\n  displayName: \"styles__NavigationContainer\",\n  componentId: \"cn10d8-1\"\n})([\"list-style-type:none;display:flex;flex-direction:row;li{margin-right:25px;}\"]);\nexport const NavLink = styled.a.withConfig({\n  displayName: \"styles__NavLink\",\n  componentId: \"cn10d8-2\"\n})([\"color:\", \";\"], props => props.isSelected ? props.theme.primary : props.theme.text);",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -16,9 +16,7 @@ function Footer() {
         </li>
         <li>
           <Link href="/contact">
-            <NavLink isSelected={router.pathname === "/contact"}>
-              Contact
-            </NavLink>
+            <NavLink isSelected={router.pathname === "/contact"}>Contact</NavLink>
           </Link>
         </li>
       </NavigationContainer>

@@ -1,1 +1,7 @@
-{"ast":null,"code":"export const LIGHT = \"light\";\nexport const DARK = \"dark\";\nexport const DARKER = \"darker\";","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "export const LIGHT = \"light\";\nexport const DARK = \"dark\";\nexport const DARKER = \"darker\";",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

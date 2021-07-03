@@ -1,1 +1,15 @@
-{"ast":null,"code":"import styled from \"styled-components\";\nexport var FooterContainer = styled.footer.withConfig({\n  displayName: \"styles__FooterContainer\",\n  componentId: \"k7jara-0\"\n})([\"padding:25px 50px;height:100px;\"]);","map":{"version":3,"sources":["/Users/lq/dev/long-quan/ui/components/Footer/styles.js"],"names":["styled","FooterContainer","footer"],"mappings":"AAAA,OAAOA,MAAP,MAAmB,mBAAnB;AAEA,OAAO,IAAMC,eAAe,GAAGD,MAAM,CAACE,MAAV;AAAA;AAAA;AAAA,uCAArB","sourcesContent":["import styled from \"styled-components\";\n\nexport const FooterContainer = styled.footer`\n  padding: 25px 50px;\n  height: 100px;\n`\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import styled from \"styled-components\";\nexport var FooterContainer = styled.footer.withConfig({\n  displayName: \"styles__FooterContainer\",\n  componentId: \"k7jara-0\"\n})([\"padding:25px 50px;height:100px;\"]);",
+  "map": {
+    "version": 3,
+    "sources": ["/Users/lq/dev/long-quan/ui/components/Footer/styles.js"],
+    "names": ["styled", "FooterContainer", "footer"],
+    "mappings": "AAAA,OAAOA,MAAP,MAAmB,mBAAnB;AAEA,OAAO,IAAMC,eAAe,GAAGD,MAAM,CAACE,MAAV;AAAA;AAAA;AAAA,uCAArB",
+    "sourcesContent": [
+      "import styled from \"styled-components\";\n\nexport const FooterContainer = styled.footer`\n  padding: 25px 50px;\n  height: 100px;\n`\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -1,1 +1,7 @@
-{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from \"react\";\nimport { FooterContainer } from \"./styles\";\n\nfunction Footer() {\n  return /*#__PURE__*/_jsx(FooterContainer, {\n    children: /*#__PURE__*/_jsx(\"p\", {\n      children: \"Made using React and Next.js.\"\n    })\n  });\n}\n\nexport default Footer;","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from \"react\";\nimport { FooterContainer } from \"./styles\";\n\nfunction Footer() {\n  return /*#__PURE__*/_jsx(FooterContainer, {\n    children: /*#__PURE__*/_jsx(\"p\", {\n      children: \"Made using React and Next.js.\"\n    })\n  });\n}\n\nexport default Footer;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -8,9 +8,7 @@ function getProfilePicture() {
 }
 
 function ProfilePicture() {
-  const [currentPicturePath, setCurrentPicturePath] = useState(
-    getProfilePicture()
-  );
+  const [currentPicturePath, setCurrentPicturePath] = useState(getProfilePicture());
 
   function randomizeProfilePicture() {
     setCurrentPicturePath(getProfilePicture());
@@ -20,8 +18,7 @@ function ProfilePicture() {
     <div
       role="button"
       onClick={() => randomizeProfilePicture()}
-      style={{ padding: "0px 15px", cursor: "pointer" }}
-    >
+      style={{ padding: "0px 15px", cursor: "pointer" }}>
       <div
         style={{
           textAlign: "center",
@@ -29,11 +26,10 @@ function ProfilePicture() {
           width: 200,
           position: "relative",
           margin: "0 auto"
-        }}
-      >
+        }}>
         <Image
           className="rounded"
-          src={getProfilePicture()}
+          src={currentPicturePath}
           alt="Long-Quan"
           layout="fill"
           objectFit="cover"

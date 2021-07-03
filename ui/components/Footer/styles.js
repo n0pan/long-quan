@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
   text-align: left;
   display: flex;
-`
+`;
 
 export const NavigationContainer = styled.ul`
   list-style-type: none;
@@ -16,6 +16,5 @@ export const NavigationContainer = styled.ul`
 
 export const NavLink = styled.a`
   cursor: pointer;
-  color: ${props =>
-    props.isSelected ? props.theme.primary : props.theme.text};
+  color: ${(props) => (props.isSelected ? props.theme.primary : props.theme.text)};
 `;

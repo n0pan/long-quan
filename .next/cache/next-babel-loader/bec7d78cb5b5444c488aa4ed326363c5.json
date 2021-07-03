@@ -1,1 +1,15 @@
-{"ast":null,"code":"import styled from \"styled-components\";\nexport const TextLogo = styled.h1.withConfig({\n  displayName: \"styles__TextLogo\",\n  componentId: \"e5t6wu-0\"\n})([\"display:inline-block;font-weight:400;font-size:24px;span{text-transform:uppercase;font-weight:800;color:\", \";}\"], ({\n  theme\n}) => theme.primary);","map":{"version":3,"sources":["/Users/n0pan/dev/long-quan/ui/components/Logo/styles.js"],"names":["styled","TextLogo","h1","theme","primary"],"mappings":"AAAA,OAAOA,MAAP,MAAmB,mBAAnB;AAEA,OAAO,MAAMC,QAAQ,GAAGD,MAAM,CAACE,EAAV;AAAA;AAAA;AAAA,uHAQR,CAAC;AAAEC,EAAAA;AAAF,CAAD,KAAeA,KAAK,CAACC,OARb,CAAd","sourcesContent":["import styled from \"styled-components\";\n\nexport const TextLogo = styled.h1`\n  display: inline-block;\n  font-weight: 400;\n  font-size: 24px;\n\n  span {\n    text-transform: uppercase;\n    font-weight: 800;\n    color: ${({ theme }) => theme.primary};\n  }\n`;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import styled from \"styled-components\";\nexport const TextLogo = styled.h1.withConfig({\n  displayName: \"styles__TextLogo\",\n  componentId: \"e5t6wu-0\"\n})([\"display:inline-block;font-weight:400;font-size:24px;span{text-transform:uppercase;font-weight:800;color:\", \";}\"], ({\n  theme\n}) => theme.primary);",
+  "map": {
+    "version": 3,
+    "sources": ["/Users/n0pan/dev/long-quan/ui/components/Logo/styles.js"],
+    "names": ["styled", "TextLogo", "h1", "theme", "primary"],
+    "mappings": "AAAA,OAAOA,MAAP,MAAmB,mBAAnB;AAEA,OAAO,MAAMC,QAAQ,GAAGD,MAAM,CAACE,EAAV;AAAA;AAAA;AAAA,uHAQR,CAAC;AAAEC,EAAAA;AAAF,CAAD,KAAeA,KAAK,CAACC,OARb,CAAd",
+    "sourcesContent": [
+      "import styled from \"styled-components\";\n\nexport const TextLogo = styled.h1`\n  display: inline-block;\n  font-weight: 400;\n  font-size: 24px;\n\n  span {\n    text-transform: uppercase;\n    font-weight: 800;\n    color: ${({ theme }) => theme.primary};\n  }\n`;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

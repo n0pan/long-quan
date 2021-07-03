@@ -21,10 +21,7 @@ function useTheme() {
   useEffect(() => {
     if (localStorage.getItem("theme")) {
       setThemeName(localStorage.getItem("theme"));
-    } else if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setThemeName(DARK);
     } else {
       setThemeName(LIGHT);
@@ -35,7 +32,7 @@ function useTheme() {
     setTheme(getTheme(themeName));
   }, [themeName]);
 
-  const onSetThemeName = themeName => {
+  const onSetThemeName = (themeName) => {
     localStorage.setItem("theme", themeName);
     setThemeName(themeName);
   };

@@ -1,1 +1,7 @@
-{"ast":null,"code":"import styled from \"styled-components\";\nexport const Header = styled.header`\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n`;","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import styled from \"styled-components\";\nexport const Header = styled.header`\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n`;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

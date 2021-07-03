@@ -1,1 +1,7 @@
-{"ast":null,"code":"export { default as Header } from \"./Header\";\nexport { default as Footer } from \"./Footer\";\nexport { default as ThemeSwitcher } from \"./ThemeSwitcher\";","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "export { default as Header } from \"./Header\";\nexport { default as Footer } from \"./Footer\";\nexport { default as ThemeSwitcher } from \"./ThemeSwitcher\";",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

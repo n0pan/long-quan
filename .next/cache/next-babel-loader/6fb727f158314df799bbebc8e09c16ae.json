@@ -1,1 +1,7 @@
-{"ast":null,"code":"import { createGlobalStyle } from \"styled-components\";\nexport const GlobalStyles = createGlobalStyle`\n  html, body {\n    background: ${({\n  theme\n}) => theme.background};\n    color: ${({\n  theme\n}) => theme.text};\n    font-family: \"JetBrains Mono\", monospace;\n    font-weight: 400;\n    min-height: 90vh;\n    margin: 0px;\n    padding: 0px;\n    height: 100%;\n    width: 100%;\n  }\n  main {\n    padding: 50px;\n  }\n  button {\n    font-family: \"JetBrains Mono\", monospace;\n  }\n  a {\n    text-decoration: none;\n    color: red;\n  }\n`;","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import { createGlobalStyle } from \"styled-components\";\nexport const GlobalStyles = createGlobalStyle`\n  html, body {\n    background: ${({\n  theme\n}) => theme.background};\n    color: ${({\n  theme\n}) => theme.text};\n    font-family: \"JetBrains Mono\", monospace;\n    font-weight: 400;\n    min-height: 90vh;\n    margin: 0px;\n    padding: 0px;\n    height: 100%;\n    width: 100%;\n  }\n  main {\n    padding: 50px;\n  }\n  button {\n    font-family: \"JetBrains Mono\", monospace;\n  }\n  a {\n    text-decoration: none;\n    color: red;\n  }\n`;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

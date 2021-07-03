@@ -263,7 +263,7 @@ function ProfilePicture() {
       },
       children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
         className: "rounded",
-        src: getProfilePicture(),
+        src: currentPicturePath,
         alt: "Long-Quan",
         layout: "fill",
         objectFit: "cover",

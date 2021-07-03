@@ -1,1 +1,7 @@
-{"ast":null,"code":"import styled from \"styled-components\";\nexport var TextLogo = styled.h1.withConfig({\n  displayName: \"styles__TextLogo\",\n  componentId: \"sc-e5t6wu-0\"\n})([\"span{text-transform:uppercase;font-weight:800;}\"]);","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import styled from \"styled-components\";\nexport var TextLogo = styled.h1.withConfig({\n  displayName: \"styles__TextLogo\",\n  componentId: \"sc-e5t6wu-0\"\n})([\"span{text-transform:uppercase;font-weight:800;}\"]);",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -1,1 +1,15 @@
-{"ast":null,"code":"import ProfilePicture from \"./ProfilePicture\";\nexport default ProfilePicture;","map":{"version":3,"sources":["/Users/n0pan/dev/long-quan/ui/components/ProfilePicture/index.js"],"names":["ProfilePicture"],"mappings":"AAAA,OAAOA,cAAP,MAA2B,kBAA3B;AAEA,eAAeA,cAAf","sourcesContent":["import ProfilePicture from \"./ProfilePicture\";\n\nexport default ProfilePicture;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import ProfilePicture from \"./ProfilePicture\";\nexport default ProfilePicture;",
+  "map": {
+    "version": 3,
+    "sources": ["/Users/n0pan/dev/long-quan/ui/components/ProfilePicture/index.js"],
+    "names": ["ProfilePicture"],
+    "mappings": "AAAA,OAAOA,cAAP,MAA2B,kBAA3B;AAEA,eAAeA,cAAf",
+    "sourcesContent": [
+      "import ProfilePicture from \"./ProfilePicture\";\n\nexport default ProfilePicture;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

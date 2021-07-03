@@ -1,1 +1,7 @@
-{"ast":null,"code":"import styled from \"styled-components\";\nexport const ButtonContainer = styled.ul`\n  list-style-type: none;\n  display: flex;\n  flex-direction: row;\n`;\nexport const Button = styled.button`\n  cursor: pointer;\n  background: transparent;\n  outline: transparent;\n  border: none;\n  color: ${props => props.isSelected ? \"red\" : props.theme.text};\n  font-size: inherit;\n`;","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import styled from \"styled-components\";\nexport const ButtonContainer = styled.ul`\n  list-style-type: none;\n  display: flex;\n  flex-direction: row;\n`;\nexport const Button = styled.button`\n  cursor: pointer;\n  background: transparent;\n  outline: transparent;\n  border: none;\n  color: ${props => props.isSelected ? \"red\" : props.theme.text};\n  font-size: inherit;\n`;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

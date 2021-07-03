@@ -1,1 +1,7 @@
-{"ast":null,"code":"import styled from \"styled-components\";\nexport var FooterContainer = styled.footer.withConfig({\n  displayName: \"styles__FooterContainer\",\n  componentId: \"k7jara-0\"\n})([\"padding:25px 50px;height:100px;\"]);","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import styled from \"styled-components\";\nexport var FooterContainer = styled.footer.withConfig({\n  displayName: \"styles__FooterContainer\",\n  componentId: \"k7jara-0\"\n})([\"padding:25px 50px;height:100px;\"]);",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}
