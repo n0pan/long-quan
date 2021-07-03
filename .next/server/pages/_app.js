@@ -198,21 +198,17 @@ var external_react_ = __webpack_require__("cDcd");
 var external_styled_components_ = __webpack_require__("Dtiu");
 var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
 
-// CONCATENATED MODULE: ./ui/components/Logo/styles.js
-
-const TextLogo = external_styled_components_default.a.h1.withConfig({
-  displayName: "styles__TextLogo",
-  componentId: "sc-e5t6wu-0"
-})(["span{text-transform:uppercase;font-weight:800;}"]);
 // CONCATENATED MODULE: ./ui/components/Logo/Logo.js
 
 
 
 
-
 function Logo() {
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(TextLogo, {
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("h1", {
     children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+      style: {
+        textTransform: "uppercase"
+      },
       children: "Hoang-Pham"
     }), " Long-Quan"]
   });
@@ -226,21 +222,24 @@ function Logo() {
 var next_image = __webpack_require__("Aiso");
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 
-// CONCATENATED MODULE: ./ui/components/ProfilePicture/styles.js
-
-const PictureContainer = external_styled_components_default.a.div.withConfig({
-  displayName: "styles__PictureContainer",
-  componentId: "sc-1uh5nxr-0"
-})(["padding:0px 15px;div{text-align:center;height:200px;width:200px;position:relative;margin:0 auto;}"]);
 // CONCATENATED MODULE: ./ui/components/ProfilePicture/ProfilePicture.js
 
 
 
 
-
 function ProfilePicture() {
-  return /*#__PURE__*/Object(jsx_runtime_["jsx"])(PictureContainer, {
+  return /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+    style: {
+      padding: "0px 15px"
+    },
     children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+      style: {
+        textAlign: "center",
+        height: 200,
+        width: 200,
+        position: "relative",
+        margin: "0 auto"
+      },
       children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(image_default.a, {
         className: "rounded",
         src: "/images/rounded-pro-pic.png",
@@ -258,44 +257,28 @@ function ProfilePicture() {
 // CONCATENATED MODULE: ./ui/components/ProfilePicture/index.js
 
 /* harmony default export */ var components_ProfilePicture = (ProfilePicture_ProfilePicture);
-// CONCATENATED MODULE: ./ui/components/Header/styles.js
-
-const HeaderContainer = external_styled_components_default.a.div.withConfig({
-  displayName: "styles__HeaderContainer",
-  componentId: "sc-1atpu6b-0"
-})(["display:flex;flex-direction:column;"]);
-const NameContainer = external_styled_components_default.a.div.withConfig({
-  displayName: "styles__NameContainer",
-  componentId: "sc-1atpu6b-1"
-})(["text-align:center;"]);
-const NavigationContainer = external_styled_components_default.a.ul.withConfig({
-  displayName: "styles__NavigationContainer",
-  componentId: "sc-1atpu6b-2"
-})(["list-style-type:none;text-align:center;li{margin-right:25px;display:inline;}"]);
-const NavLink = external_styled_components_default.a.a.withConfig({
-  displayName: "styles__NavLink",
-  componentId: "sc-1atpu6b-3"
-})(["cursor:pointer;color:", ";"], props => props.isSelected ? props.theme.primary : props.theme.text);
-// CONCATENATED MODULE: ./ui/components/Header/Header.js
+// CONCATENATED MODULE: ./ui/components/ProfileHeader/ProfileHeader.js
 
 
 
 
 
 
-
-function Header() {
-  return /*#__PURE__*/Object(jsx_runtime_["jsx"])(HeaderContainer, {
-    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(NameContainer, {
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ProfilePicture, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Logo, {})]
-    })
+function ProfileHeader() {
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      textAlign: "center"
+    },
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ProfilePicture, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Logo, {})]
   });
 }
 
-/* harmony default export */ var Header_Header = (Header);
-// CONCATENATED MODULE: ./ui/components/Header/index.js
+/* harmony default export */ var ProfileHeader_ProfileHeader = (ProfileHeader);
+// CONCATENATED MODULE: ./ui/components/ProfileHeader/index.js
 
-/* harmony default export */ var components_Header = (Header_Header);
+/* harmony default export */ var components_ProfileHeader = (ProfileHeader_ProfileHeader);
 // EXTERNAL MODULE: ./node_modules/next/link.js
 var next_link = __webpack_require__("YFqc");
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
@@ -309,11 +292,11 @@ const FooterContainer = external_styled_components_default.a.footer.withConfig({
   displayName: "styles__FooterContainer",
   componentId: "sc-k7jara-0"
 })(["text-align:left;display:flex;"]);
-const styles_NavigationContainer = external_styled_components_default.a.ul.withConfig({
+const NavigationContainer = external_styled_components_default.a.ul.withConfig({
   displayName: "styles__NavigationContainer",
   componentId: "sc-k7jara-1"
 })(["list-style-type:none;text-align:left;li{margin-right:25px;display:inline;}"]);
-const styles_NavLink = external_styled_components_default.a.a.withConfig({
+const NavLink = external_styled_components_default.a.a.withConfig({
   displayName: "styles__NavLink",
   componentId: "sc-k7jara-2"
 })(["cursor:pointer;color:", ";"], props => props.isSelected ? props.theme.primary : props.theme.text);
@@ -328,11 +311,11 @@ const styles_NavLink = external_styled_components_default.a.a.withConfig({
 function Footer() {
   const router = Object(router_["useRouter"])();
   return /*#__PURE__*/Object(jsx_runtime_["jsx"])(FooterContainer, {
-    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(styles_NavigationContainer, {
+    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(NavigationContainer, {
       children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("li", {
         children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
           href: "/",
-          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(styles_NavLink, {
+          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(NavLink, {
             isSelected: router.pathname === "/",
             children: "Home"
           })
@@ -340,7 +323,7 @@ function Footer() {
       }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("li", {
         children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
           href: "/contact",
-          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(styles_NavLink, {
+          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(NavLink, {
             isSelected: router.pathname === "/contact",
             children: "Contact"
           })
@@ -598,24 +581,24 @@ function MyApp({
         href: "https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap",
         rel: "stylesheet"
       })]
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(GlobalStyles, {}), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(Container, {
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(GlobalStyles, {}), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(AppContainer, {
       children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ThemeSwitcher, {
         onChange: setThemeName,
         currentTheme: themeName
-      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(Main, {
-        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Header, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Component, _app_objectSpread({}, pageProps))]
+      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(ContentContainer, {
+        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ProfileHeader, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Component, _app_objectSpread({}, pageProps))]
       }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Footer, {})]
     })]
   });
 }
 
 /* harmony default export */ var _app = __webpack_exports__["default"] = (MyApp);
-const Container = external_styled_components_default.a.div.withConfig({
-  displayName: "_app__Container",
+const AppContainer = external_styled_components_default.a.div.withConfig({
+  displayName: "_app__AppContainer",
   componentId: "sc-17zi1f1-0"
 })(["display:flex;flex-direction:column;padding:15px 25px;height:100%;"]);
-const Main = external_styled_components_default.a.div.withConfig({
-  displayName: "_app__Main",
+const ContentContainer = external_styled_components_default.a.div.withConfig({
+  displayName: "_app__ContentContainer",
   componentId: "sc-17zi1f1-1"
 })(["display:flex;flex-direction:column;flex:1;justify-content:center;text-align:center;"]);
 

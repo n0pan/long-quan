@@ -1,11 +1,10 @@
 import React from "react";
-import { TextLogo } from "./styles";
 
 function Logo() {
   return (
-    <TextLogo>
-      <span>Hoang-Pham</span> Long-Quan
-    </TextLogo>
+    <h1>
+      <span style={{ textTransform: "uppercase" }}>Hoang-Pham</span> Long-Quan
+    </h1>
   );
 }
 

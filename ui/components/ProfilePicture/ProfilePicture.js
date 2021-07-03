@@ -2,12 +2,18 @@ import React from "react";
 
 import Image from "next/image";
 
-import { PictureContainer } from "./styles";
-
 function ProfilePicture() {
   return (
-    <PictureContainer>
-      <div>
+    <div style={{ padding: "0px 15px" }}>
+      <div
+        style={{
+          textAlign: "center",
+          height: 200,
+          width: 200,
+          position: "relative",
+          margin: "0 auto"
+        }}
+      >
         <Image
           className="rounded"
           src="/images/rounded-pro-pic.png"
@@ -18,7 +24,7 @@ function ProfilePicture() {
           quality={75}
         />
       </div>
-    </PictureContainer>
+    </div>
   );
 }
 

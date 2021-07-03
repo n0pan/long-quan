@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
-import { Header, Footer, ThemeSwitcher } from "../ui/components";
+import { ProfileHeader, Footer, ThemeSwitcher } from "../ui/components";
 import { useTheme } from "../ui/hooks";
 import { GlobalStyles } from "../ui/globalStyles";
 
@@ -26,28 +26,28 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <GlobalStyles />
-      <Container>
+      <AppContainer>
         <ThemeSwitcher onChange={setThemeName} currentTheme={themeName} />
-        <Main>
-          <Header />
+        <ContentContainer>
+          <ProfileHeader />
           <Component {...pageProps} />
-        </Main>
+        </ContentContainer>
         <Footer />
-      </Container>
+      </AppContainer>
     </ThemeProvider>
   );
 }
 
 export default MyApp;
 
-const Container = styled.div`
+const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 15px 25px;
   height: 100%;
 `;
 
-const Main = styled.div`
+const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
