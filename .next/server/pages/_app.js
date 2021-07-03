@@ -613,7 +613,7 @@ function MyApp({
 const Container = external_styled_components_default.a.div.withConfig({
   displayName: "_app__Container",
   componentId: "sc-17zi1f1-0"
-})(["display:flex;flex-direction:column;padding:7px 25px;height:100%;"]);
+})(["display:flex;flex-direction:column;padding:15px 25px;height:100%;"]);
 const Main = external_styled_components_default.a.div.withConfig({
   displayName: "_app__Main",
   componentId: "sc-17zi1f1-1"

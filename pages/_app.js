@@ -43,7 +43,7 @@ export default MyApp;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 7px 25px;
+  padding: 15px 25px;
   height: 100%;
 `;
 
