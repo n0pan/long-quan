@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Image from "next/image";
 import { getRandomInt } from "../../utils/profilePictures";
@@ -8,6 +8,12 @@ function getProfilePicture() {
 }
 
 function ProfilePicture() {
+  const [currentPicturePath, setCurrentPicturePath] = useState(getProfilePicture());
+
+  function randomizeProfilePicture() {
+    setCurrentPicturePath(getProfilePicture());
+  }
+
   return (
     <div
       role="button"
@@ -23,7 +29,7 @@ function ProfilePicture() {
         }}>
         <Image
           className="rounded"
-          src={getProfilePicture()}
+          src={currentPicturePath}
           alt="Long-Quan"
           layout="fill"
           objectFit="cover"
