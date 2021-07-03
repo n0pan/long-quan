@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Image from "next/image";
+import { getRandomInt } from "../../utils/profilePictures";
+
+function getProfilePicture() {
+  return `/images/header_pictures/lq_${getRandomInt(1, 8)}.jpg`;
+}
 
 function ProfilePicture() {
+  const [currentPicturePath, setCurrentPicturePath] = useState(
+    getProfilePicture()
+  );
+
+  function randomizeProfilePicture() {
+    setCurrentPicturePath(getProfilePicture());
+  }
+
   return (
-    <div style={{ padding: "0px 15px" }}>
+    <div
+      role="button"
+      onClick={() => randomizeProfilePicture()}
+      style={{ padding: "0px 15px", cursor: "pointer" }}
+    >
       <div
         style={{
           textAlign: "center",
@@ -16,7 +33,7 @@ function ProfilePicture() {
       >
         <Image
           className="rounded"
-          src="/images/rounded-pro-pic.png"
+          src={getProfilePicture()}
           alt="Long-Quan"
           layout="fill"
           objectFit="cover"
