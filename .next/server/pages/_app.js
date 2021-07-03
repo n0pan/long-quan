@@ -617,7 +617,7 @@ const Container = external_styled_components_default.a.div.withConfig({
 const Main = external_styled_components_default.a.div.withConfig({
   displayName: "_app__Main",
   componentId: "sc-17zi1f1-1"
-})(["display:flex;flex-direction:column;flex:1;justify-content:center;"]);
+})(["display:flex;flex-direction:column;flex:1;justify-content:center;text-align:center;"]);
 
 /***/ }),
 

@@ -52,4 +52,5 @@ const Main = styled.div`
   flex-direction: column;
   flex: 1;
   justify-content: center;
+  text-align: center;
 `;
