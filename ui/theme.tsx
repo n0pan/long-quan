@@ -13,13 +13,12 @@ export const defaultTheme = {
 };
 
 export enum ThemeEnum {
-  light = "light",
-  dark = "dark"
+  Light = "light",
+  Dark = "dark"
 }
 
-export interface ThemeName {
-  themeName: ThemeEnum.light | ThemeEnum.dark;
-}
+export type ThemeName = ThemeEnum.Light | ThemeEnum.Dark
+
 export interface Theme {
   text: string;
   background: string;

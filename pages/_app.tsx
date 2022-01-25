@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { AppProps } from "next/app";
 import * as React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
@@ -6,7 +7,7 @@ import { ProfileHeader, Footer, ThemeSwitcher } from "../ui/components";
 import { useTheme } from "../ui/hooks";
 import { GlobalStyles } from "../ui/globalStyles";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   const { theme, themeName, setThemeName } = useTheme();
 
   if (!theme) return null;

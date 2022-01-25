@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { Theme } from "../ui/theme";
 
-function Home({ currentTheme }) {
+interface IHomeProps {
+  currentTheme: Theme
+}
+
+function Home({ currentTheme }: IHomeProps) {
   return (
     <Container>
-      <p>Hi, I'm Long-Quan.</p>
+      <p>Hi, I&apos;m Long-Quan.</p>
       <p>
         Take a look at my resume in{" "}
         <a href={`/cv/hoang-pham_long-quan_fr_${currentTheme}.pdf`} target="blank">
