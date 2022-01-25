@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "export { default as ProfileHeader } from \"./ProfileHeader\";\nexport { default as Footer } from \"./Footer\";\nexport { default as ThemeSwitcher } from \"./ThemeSwitcher\";",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

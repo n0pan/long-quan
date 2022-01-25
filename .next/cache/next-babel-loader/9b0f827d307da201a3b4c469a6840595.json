@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "export var LIGHT = \"light\";\nexport var DARK = \"dark\";",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

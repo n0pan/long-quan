@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import React, { useState, useEffect } from \"react\";\nimport { LIGHT, DARK, DARKER } from \"../enums/theme\";\nimport { lightTheme, darkTheme, darkerTheme } from \"../theme\";\n\nfunction getTheme(themeName) {\n  switch (themeName) {\n    case LIGHT:\n      return lightTheme;\n\n    case DARK:\n      return darkTheme;\n\n    case DARKER:\n      return darkerTheme;\n\n    default:\n      return lightTheme;\n  }\n}\n\nfunction useTheme() {\n  var _useState = useState(\"\"),\n      themeName = _useState[0],\n      setThemeName = _useState[1];\n\n  var _useState2 = useState({}),\n      theme = _useState2[0],\n      setTheme = _useState2[1];\n\n  useEffect(function () {\n    if (localStorage.getItem(\"theme\")) {\n      setThemeName(localStorage.getItem(\"theme\"));\n    } else if (window.matchMedia && window.matchMedia(\"(prefers-color-scheme: dark)\").matches) {\n      setThemeName(DARK);\n    } else {\n      setThemeName(LIGHT);\n    }\n  }, []);\n  useEffect(function () {\n    setTheme(getTheme(themeName));\n  }, [themeName]);\n\n  var onSetThemeName = function onSetThemeName(themeName) {\n    localStorage.setItem(\"theme\", themeName);\n    setThemeName(themeName);\n  };\n\n  return {\n    theme: theme,\n    themeName: themeName,\n    setThemeName: onSetThemeName\n  };\n}\n\nexport default useTheme;",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

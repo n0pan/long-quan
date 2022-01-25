@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import styled from \"styled-components\";\nexport var Header = styled.header.withConfig({\n  displayName: \"styles__Header\",\n  componentId: \"cn10d8-0\"\n})([\"display:flex;flex-direction:column;padding:50px 50px 20px 50px;height:350px;\"]);\nexport var NameContainer = styled.div.withConfig({\n  displayName: \"styles__NameContainer\",\n  componentId: \"cn10d8-1\"\n})([\"text-align:center;\"]);\nexport var NavigationContainer = styled.ul.withConfig({\n  displayName: \"styles__NavigationContainer\",\n  componentId: \"cn10d8-2\"\n})([\"list-style-type:none;text-align:center;li{margin-right:25px;display:inline;}\"]);\nexport var NavLink = styled.a.withConfig({\n  displayName: \"styles__NavLink\",\n  componentId: \"cn10d8-3\"\n})([\"cursor:pointer;color:\", \";\"], function (props) {\n  return props.isSelected ? props.theme.primary : props.theme.text;\n});",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

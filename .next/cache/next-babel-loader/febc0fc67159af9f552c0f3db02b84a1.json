@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import styled from \"styled-components\";\nexport var FooterContainer = styled.footer.withConfig({\n  displayName: \"styles__FooterContainer\",\n  componentId: \"sc-k7jara-0\"\n})([\"text-align:left;display:flex;\"]);\nexport var NavigationContainer = styled.ul.withConfig({\n  displayName: \"styles__NavigationContainer\",\n  componentId: \"sc-k7jara-1\"\n})([\"list-style-type:none;text-align:left;li{margin-right:25px;display:inline;}\"]);\nexport var NavLink = styled.a.withConfig({\n  displayName: \"styles__NavLink\",\n  componentId: \"sc-k7jara-2\"\n})([\"cursor:pointer;color:\", \";\"], function (props) {\n  return props.isSelected ? props.theme.primary : props.theme.text;\n});",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

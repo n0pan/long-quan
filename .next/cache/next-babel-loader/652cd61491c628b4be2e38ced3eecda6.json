@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "export var lightTheme = {\n  text: \"#000\",\n  background: \"#FFF\",\n  cardBackground: \"#FFF\"\n};\nexport var darkTheme = {\n  text: \"#FFF\",\n  background: \"#090b10\",\n  cardBackground: \"#1c233a\"\n};",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

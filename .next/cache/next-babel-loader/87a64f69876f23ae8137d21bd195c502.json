@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import Navbar from \"./Navbar\";\nexport default Navbar;",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

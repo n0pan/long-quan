@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { jsxs as _jsxs } from \"react/jsx-runtime\";\nimport React from \"react\";\nimport { ButtonContainer, Button } from \"./styles\";\nconst LIGHT = \"light\";\nconst DARK = \"dark\";\nconst DARKER = \"darker\";\n\nfunction ThemeSwitcher({\n  onChange,\n  currentTheme\n}) {\n  return /*#__PURE__*/_jsxs(ButtonContainer, {\n    children: [/*#__PURE__*/_jsx(\"li\", {\n      children: /*#__PURE__*/_jsx(Button, {\n        isSelected: currentTheme === LIGHT,\n        value: LIGHT,\n        onClick: e => onChange(e.currentTarget.value),\n        children: \"Light\"\n      })\n    }), /*#__PURE__*/_jsx(\"li\", {\n      children: /*#__PURE__*/_jsx(Button, {\n        isSelected: currentTheme === DARK,\n        value: DARK,\n        onClick: e => onChange(e.currentTarget.value),\n        children: \"Dark\"\n      })\n    }), /*#__PURE__*/_jsx(\"li\", {\n      children: /*#__PURE__*/_jsx(Button, {\n        isSelected: currentTheme === DARKER,\n        value: DARKER,\n        onClick: e => onChange(e.currentTarget.value),\n        children: \"Darker\"\n      })\n    })]\n  });\n}\n\nexport default ThemeSwitcher;",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import styled from \"styled-components\";\nexport const Header = styled.header`\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n`;\nexport const NavigationContainer = styled.ul`\n  list-style-type: none;\n  display: flex;\n  li {\n    margin-right: 25px;\n    a {\n      color: ${props => props.isSelected ? props.theme.primary : props.theme.text};\n    }\n  }\n`;",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

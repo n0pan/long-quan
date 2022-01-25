@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import _taggedTemplateLiteral from \"@babel/runtime/helpers/esm/taggedTemplateLiteral\";\n\nfunction _templateObject() {\n  var data = _taggedTemplateLiteral([\"\\n  display: inline-block;\\n  font-weight: 400;\\n  font-size: 24px;\\n  \\n  span {\\n    text-transform: uppercase;\\n    font-weight: 800;\\n    color: red;\\n  }\\n\"]);\n\n  _templateObject = function _templateObject() {\n    return data;\n  };\n\n  return data;\n}\n\nimport styled from \"styled-components\";\nexport var TextLogo = styled.h1(_templateObject());",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { jsxs as _jsxs } from \"react/jsx-runtime\";\nimport React from \"react\";\nimport Link from \"next/link\";\nimport { useRouter } from \"next/router\";\nimport Logo from \"../Logo\";\nimport ThemeSwitcher from \"../ThemeSwitcher\";\nimport { Header, NavigationContainer, NavLink } from \"./styles\";\n\nfunction Navbar(_ref) {\n  var onChangeTheme = _ref.onChangeTheme,\n      currentTheme = _ref.currentTheme;\n  var router = useRouter();\n  return /*#__PURE__*/_jsxs(Header, {\n    children: [/*#__PURE__*/_jsx(Logo, {}), /*#__PURE__*/_jsxs(NavigationContainer, {\n      children: [/*#__PURE__*/_jsx(\"li\", {\n        children: /*#__PURE__*/_jsx(Link, {\n          href: \"/\",\n          children: /*#__PURE__*/_jsx(NavLink, {\n            isSelected: router.pathname === \"/\",\n            children: \"Home\"\n          })\n        })\n      }), /*#__PURE__*/_jsx(\"li\", {\n        children: /*#__PURE__*/_jsx(Link, {\n          href: \"/about\",\n          children: /*#__PURE__*/_jsx(NavLink, {\n            isSelected: router.pathname === \"/about\",\n            children: \"About me\"\n          })\n        })\n      })]\n    }), /*#__PURE__*/_jsx(ThemeSwitcher, {\n      onChange: onChangeTheme,\n      currentTheme: currentTheme\n    })]\n  });\n}\n\nexport default Navbar;",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

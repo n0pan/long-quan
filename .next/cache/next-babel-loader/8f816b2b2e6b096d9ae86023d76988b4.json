@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { jsxs as _jsxs } from \"react/jsx-runtime\";\nimport React from \"react\";\nimport Link from \"next/link\";\nimport { useRouter } from \"next/router\";\nimport Logo from \"../Logo\";\nimport ThemeSwitcher from \"../ThemeSwitcher\";\nimport ProfilePicture from \"../ProfilePicture\";\nimport { Header, NameContainer, NavigationContainer, NavLink } from \"./styles\";\n\nfunction Navbar(_ref) {\n  var onChangeTheme = _ref.onChangeTheme,\n      currentTheme = _ref.currentTheme;\n  var router = useRouter();\n  return /*#__PURE__*/_jsxs(Header, {\n    children: [/*#__PURE__*/_jsxs(NameContainer, {\n      children: [/*#__PURE__*/_jsx(ProfilePicture, {}), /*#__PURE__*/_jsx(Logo, {})]\n    }), /*#__PURE__*/_jsx(\"div\", {\n      style: {\n        position: \"absolute\",\n        right: 50,\n        top: 15\n      },\n      children: /*#__PURE__*/_jsx(ThemeSwitcher, {\n        onChange: onChangeTheme,\n        currentTheme: currentTheme\n      })\n    })]\n  });\n}\n\nexport default Navbar;",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

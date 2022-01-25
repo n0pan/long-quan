@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "export const LIGHT = \"light\";\nexport const DARK = \"dark\";",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

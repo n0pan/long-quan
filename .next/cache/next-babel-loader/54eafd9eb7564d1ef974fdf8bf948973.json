@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "export const lightTheme = {\n  text: \"#000\",\n  background: \"#FFF\"\n};\nexport const darkTheme = {\n  text: \"#FFF\",\n  background: \"#0B0F12\"\n};\nexport const defaultTheme = {\n  primary: \"#E7555A\"\n};",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

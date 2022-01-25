@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { jsxs as _jsxs } from \"react/jsx-runtime\";\n\nfunction Home() {\n  return /*#__PURE__*/_jsxs(\"div\", {\n    children: [/*#__PURE__*/_jsx(\"div\", {\n      style: {\n        textAlign: \"center\",\n        padding: 50\n      },\n      children: /*#__PURE__*/_jsx(\"img\", {\n        src: \"https://via.placeholder.com/450x250\",\n        alt: \"\"\n      })\n    }), /*#__PURE__*/_jsxs(\"p\", {\n      children: [\"Hello, I'm Long-Quan. I'm a web developer from\", \" \", /*#__PURE__*/_jsx(\"span\", {\n        children: \"Montr\\xE9al, Canada\"\n      }), \" who specializes in front-end development.\"]\n    })]\n  });\n}\n\nexport default Home;",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

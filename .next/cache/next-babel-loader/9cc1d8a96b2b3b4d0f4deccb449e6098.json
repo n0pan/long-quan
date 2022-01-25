@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { jsxs as _jsxs } from \"react/jsx-runtime\";\nimport React from \"react\";\nimport { LIGHT, DARK } from \"../../enums/theme\";\nimport { ButtonContainer, Button } from \"./styles\";\n\nfunction ThemeSwitcher(_ref) {\n  var onChange = _ref.onChange,\n      currentTheme = _ref.currentTheme;\n  return /*#__PURE__*/_jsxs(ButtonContainer, {\n    children: [/*#__PURE__*/_jsx(\"li\", {\n      children: /*#__PURE__*/_jsx(Button, {\n        isSelected: currentTheme === LIGHT,\n        value: LIGHT,\n        onClick: function onClick(e) {\n          return onChange(e.currentTarget.value);\n        },\n        children: \"Light\"\n      })\n    }), /*#__PURE__*/_jsx(\"li\", {\n      children: /*#__PURE__*/_jsx(Button, {\n        isSelected: currentTheme === DARK,\n        value: DARK,\n        onClick: function onClick(e) {\n          return onChange(e.currentTarget.value);\n        },\n        children: \"Dark\"\n      })\n    })]\n  });\n}\n\nexport default ThemeSwitcher;",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}

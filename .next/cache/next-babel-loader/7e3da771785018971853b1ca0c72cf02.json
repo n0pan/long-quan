@@ -1,7 +1,0 @@
-{
-  "ast": null,
-  "code": "import ProfileHeader from \"./ProfileHeader\";\nexport default ProfileHeader;",
-  "map": null,
-  "metadata": {},
-  "sourceType": "module"
-}
