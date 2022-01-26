@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-
+import * as React from "react";
 import Image from "next/image";
-import { getRandomInt } from "../../utils/profilePictures";
+
+import { getRandomInt } from "../../utils/";
 
 function getProfilePicture() {
   return `/images/header_pictures/lq_${getRandomInt(1, 8)}.jpg`;
 }
 
 function ProfilePicture() {
-  const [currentPicturePath, setCurrentPicturePath] = useState(getProfilePicture());
+  const [currentPicturePath, setCurrentPicturePath] = React.useState<string>(getProfilePicture());
 
   function randomizeProfilePicture() {
     setCurrentPicturePath(getProfilePicture());
