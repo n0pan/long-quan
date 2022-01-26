@@ -7,7 +7,11 @@ export const ButtonContainer = styled.ul`
   justify-content: flex-end;
 `;
 
-export const Button = styled.button`
+type ButtonProps = {
+  isSelected: boolean;
+};
+
+export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   background: transparent;
   outline: transparent;

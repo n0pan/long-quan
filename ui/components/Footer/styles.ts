@@ -14,7 +14,11 @@ export const NavigationContainer = styled.ul`
   }
 `;
 
-export const NavLink = styled.a`
+type NavLinkProps = {
+  isSelected: boolean;
+};
+
+export const NavLink = styled.a<NavLinkProps>`
   cursor: pointer;
   color: ${(props) => (props.isSelected ? props.theme.primary : props.theme.text)};
 `;
