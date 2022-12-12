@@ -15,6 +15,11 @@ function Footer() {
           </Link>
         </li>
         <li>
+          <Link href="/projects">
+            <NavLink isSelected={router.pathname === "/projects"}>Projects</NavLink>
+          </Link>
+        </li>
+        <li>
           <Link href="/contact">
             <NavLink isSelected={router.pathname === "/contact"}>Contact</NavLink>
           </Link>
