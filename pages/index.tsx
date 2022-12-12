@@ -1,23 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import { Theme } from "../ui/theme";
 
-interface IHomeProps {
-  currentTheme: Theme
-}
-
-function Home({ currentTheme }: IHomeProps) {
+function Home() {
   return (
     <Container>
       <p>Hi, I&apos;m Long-Quan.</p>
       <p>
-        Take a look at my resume in{" "}
-        <a href={`/cv/hoang-pham_long-quan_fr_${currentTheme}.pdf`} target="blank">
-          French
+        Hake a look at my{" "}
+        <a href="https://github.com/n0pan" target="blank">
+          GitHub
         </a>{" "}
         and{" "}
-        <a href={`/cv/hoang-pham_long-quan_en_${currentTheme}.pdf`} target="blank">
-          English
+        <a href="https://www.linkedin.com/in/longquanhp/" target="blank">
+          LinkedIn
         </a>
         .
       </p>

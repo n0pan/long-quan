@@ -5,18 +5,7 @@ function Contact() {
     <div>
       <p>
         Feel free to contact me by email at{" "}
-        <a href="mailto:longquanhp@gmail.com">longquanhp@gmail.com</a>.
-      </p>
-      <p>
-        Or take a look at my{" "}
-        <a href="https://github.com/n0pan" target="blank">
-          GitHub
-        </a>{" "}
-        and{" "}
-        <a href="https://www.linkedin.com/in/longquanhp/" target="blank">
-          LinkedIn
-        </a>
-        .
+        <a href="mailto:contact@long-quan.com">contact@long-quan.com</a>.
       </p>
     </div>
   );
