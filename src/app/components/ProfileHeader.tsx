@@ -16,7 +16,7 @@ function ProfileHeader() {
       </ImageContainer>
       <Container>
         <Logo />
-        <Subtitle>Web Developer</Subtitle>
+        <Subtitle>Web Developer ● Montreal</Subtitle>
       </Container>
     </Header>
   );
@@ -27,8 +27,8 @@ export default ProfileHeader;
 const Header = styled.header`
   grid-area: header;
   padding: 15px;
-  background-color: ${(props) => props.theme.background};
-  color: ${(props) => props.theme.text};
+  background-color: ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.white};
   text-align: left;
   display: grid;
   grid-template-areas: "photo name";

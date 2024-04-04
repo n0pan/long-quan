@@ -9,33 +9,62 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 export default function Panel() {
   return (
     <Aside>
-      <h2>Contact Details</h2>
-      <List>
-        <li>
-          <StyledIcon icon={faEnvelope} />
-          <a href="mailto:longquanhp@gmail.com">longquanhp@gmail.com</a>
-        </li>
-        <li>
-          <StyledIcon icon={faGithub} />
-          <a href="https://github.com/n0pan">n0pan</a>
-        </li>
-        <li>
-          <StyledIcon icon={faLinkedin} />
-          <a href="https://www.linkedin.com/in/longquanhp/">longquanhp</a>
-        </li>
-      </List>
+      <div>
+        <h2>Contact Details</h2>
+        <List>
+          <li>
+            <StyledIcon icon={faEnvelope} height={16} />
+            <a href="mailto:longquanhp@gmail.com">longquanhp@gmail.com</a>
+          </li>
+          <li>
+            <StyledIcon icon={faGithub} height={16} />
+            <a href="https://github.com/n0pan">n0pan</a>
+          </li>
+          <li>
+            <StyledIcon icon={faLinkedin} height={16} />
+            <a href="https://www.linkedin.com/in/longquanhp/">longquanhp</a>
+          </li>
+        </List>
+      </div>
+      <div>
+        <h2>Technical Skills</h2>
+        <List>
+          <li>
+            HTML, CSS, SASS, JavaScript, TypeScript, React, Node, Apollo,
+            GraphQL, Git, MongoDB, Jest, VIM, Docker, Azure, Vercel, Next
+          </li>
+        </List>
+      </div>
+      <div>
+        <h2>Soft Skills</h2>
+        <List>
+          <li>
+            Leadership, organization, communication, team work, adaptability,
+            problem solving, active listening.
+          </li>
+        </List>
+      </div>
+      <div>
+        <h2>Languages</h2>
+        <List>
+          <li>French (native), English (native), Vietnamese (fluent)</li>
+        </List>
+      </div>
     </Aside>
   );
 }
 
 const Aside = styled.aside`
   grid-area: panel;
-  background-color: ${(props) => props.theme.panelBackground};
+  background-color: ${(props) => props.theme.secondary};
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;
 
 const StyledIcon = styled(FontAwesomeIcon)`
-  color: ${(props) => props.theme.background};
+  color: ${(props) => props.theme.primary};
   margin-right: 10px;
 `;
 

@@ -22,6 +22,12 @@ const GlobalStyles = createGlobalStyle`
     font-size: 24px;
     font-weight: 400;
   }
+
+  a {
+    color: ${(props) => props.theme.pink};
+    text-decoration: none;
+    font-weight: 500;
+  }
 `;
 
 function MainLayout({ children }: { children: ReactNode }) {
