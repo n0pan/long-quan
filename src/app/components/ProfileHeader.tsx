@@ -33,6 +33,7 @@ const Header = styled.header`
   display: grid;
   grid-template-areas: "photo name";
   gap: 48px;
+  height: 280px;
 `;
 
 const Container = styled.div`

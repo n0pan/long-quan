@@ -27,6 +27,21 @@ export default function Panel() {
         </List>
       </div>
       <div>
+        <h2>Education</h2>
+        <List>
+          <li>
+            Computer Science (Software Systems) @{" "}
+            <Accent>Concordia University, Montréal</Accent>
+            <p style={{ marginTop: 4 }}>2013 - 2015</p>
+          </li>
+          <li>
+            DEC - Arts, Lettres & Communications (Création multimédia) @{" "}
+            <Accent>Collège Jean-de-Brébeuf, Montréal</Accent>
+            <p style={{ marginTop: 4 }}>2011 - 2013</p>
+          </li>
+        </List>
+      </div>
+      <div>
         <h2>Technical Skills</h2>
         <List>
           <li>
@@ -76,4 +91,9 @@ const List = styled.ul`
     margin-left: 15px;
     margin-bottom: 15px;
   }
+`;
+
+const Accent = styled.span`
+  color: ${(props) => props.theme.pink};
+  font-weight: 700;
 `;

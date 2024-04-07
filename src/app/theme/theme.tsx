@@ -10,7 +10,6 @@ export const darkTheme: Theme = {
   white: "#fff",
   black: "#000",
   primary: "#0F2032",
-  secondary: "#F1F1E6",
-  pink: "#512A1B",
+  secondary: "#CFD2D6",
+  pink: "#95044ac2",
 };
-

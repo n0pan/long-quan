@@ -1,10 +1,10 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Karla } from "next/font/google";
 import StyledComponentsRegistry from "./lib/registry";
 import MainLayout from "./components/MainLayout";
 
-const inter = Inter({ subsets: ["latin"] });
+const karla = Karla({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Long-Quan",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={karla.className}>
         <StyledComponentsRegistry>
           <MainLayout>{children}</MainLayout>
         </StyledComponentsRegistry>

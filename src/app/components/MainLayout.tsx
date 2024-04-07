@@ -51,12 +51,12 @@ const Grid = styled.div`
   display: grid;
   height: 100%;
   grid-template-areas:
-    "header header header"
-    "panel main main"
-    "panel main main"
-    "panel main main"
-    "panel main main"
-    "panel main main";
+    "header header header header"
+    "panel main main main"
+    "panel main main main"
+    "panel main main main"
+    "panel main main main"
+    "panel main main main";
 `;
 
 const Main = styled.main`
