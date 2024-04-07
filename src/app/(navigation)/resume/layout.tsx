@@ -1,9 +1,10 @@
 "use client";
+
 import React, { ReactNode } from "react";
 import { createGlobalStyle, ThemeProvider, styled } from "styled-components";
-import { darkTheme } from "../theme/theme";
-import ProfileHeader from "./ProfileHeader";
-import Panel from "./Panel";
+import { darkTheme } from "../../theme/theme";
+import ProfileHeader from "../../components/ProfileHeader";
+import Panel from "../../components/Panel";
 
 const GlobalStyles = createGlobalStyle`
   html, body {
@@ -35,14 +36,29 @@ function MainLayout({ children }: { children: ReactNode }) {
     <>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyles />
-        <ProfileHeader />
-        <Main>{children}</Main>
+        <Grid>
+          <ProfileHeader />
+          <Panel />
+          <Main>{children}</Main>
+        </Grid>
       </ThemeProvider>
     </>
   );
 }
 
 export default MainLayout;
+
+const Grid = styled.div`
+  display: grid;
+  height: 100%;
+  grid-template-areas:
+    "header header header header"
+    "panel main main main"
+    "panel main main main"
+    "panel main main main"
+    "panel main main main"
+    "panel main main main";
+`;
 
 const Main = styled.main`
   grid-area: main;
