@@ -168,7 +168,7 @@ export default function Page() {
 }
 
 const Container = styled.div`
-  padding: 24px;
+  padding: 24px 48px;
 `;
 
 const ExperienceContainer = styled.div`
