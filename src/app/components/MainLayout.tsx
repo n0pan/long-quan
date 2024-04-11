@@ -2,8 +2,6 @@
 import React, { ReactNode } from "react";
 import { createGlobalStyle, ThemeProvider, styled } from "styled-components";
 import { darkTheme } from "../theme/theme";
-import ProfileHeader from "./ProfileHeader";
-import Panel from "./Panel";
 
 const GlobalStyles = createGlobalStyle`
   html, body {
@@ -35,8 +33,7 @@ function MainLayout({ children }: { children: ReactNode }) {
     <>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyles />
-        <ProfileHeader />
-        <Main>{children}</Main>
+        {children}
       </ThemeProvider>
     </>
   );
