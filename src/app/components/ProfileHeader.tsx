@@ -16,6 +16,8 @@ function ProfileHeader() {
             alt="portrait"
             width={200}
             height={200}
+            quality={80}
+            priority={true}
           />
         </ImageContainer>
         <Container>
