@@ -95,7 +95,7 @@ const Subtitle = styled.h2`
   margin: 0;
 `;
 
-const StyledLink = styled(Link<{ $active?: boolean }>)`
+const StyledLink = styled(Link)<{ $active?: boolean }>`
   color: ${(props) => (props.$active ? props.theme.pink : props.theme.white)};
   &:hover {
     color: ${(props) => props.theme.pink};
