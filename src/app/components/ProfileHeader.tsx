@@ -58,7 +58,19 @@ const LogoContainer = styled.div`
   color: ${(props) => props.theme.white};
   text-align: left;
   display: grid;
-  grid-template-areas: "photo name";
+  @media (max-width: 600px) {
+    grid-template-areas:
+      "photo"
+      "name";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  @media (min-width: 600px) {
+    grid-template-areas: "photo name";
+  }
   gap: 48px;
 `;
 
