@@ -32,6 +32,6 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{ts,tsx}": ["prettier --write", "yarn lint"]
+    "*.{ts,tsx}": ["prettier --write", "yarn lint", "yarn build"]
   }
 }
