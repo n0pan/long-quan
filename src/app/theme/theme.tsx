@@ -11,5 +11,5 @@ export const darkTheme: Theme = {
   black: "#000",
   primary: "#0F2032",
   secondary: "#CFD2D6",
-  pink: "#95044ac2",
+  pink: "#c8568d",
 };

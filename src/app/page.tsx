@@ -8,16 +8,6 @@ export default function Home() {
   return (
     <Background>
       <ProfileHeader />
-      <Navigation>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/resume">Resume</a>
-          </li>
-        </ul>
-      </Navigation>
     </Background>
   );
 }
@@ -29,19 +19,4 @@ const Background = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`;
-
-const Navigation = styled.nav`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  ul {
-    list-style-type: none;
-    color: ${(props) => props.theme.white};
-    margin: 0;
-    li {
-      display: inline;
-      margin-right: 50px;
-    }
-  }
 `;

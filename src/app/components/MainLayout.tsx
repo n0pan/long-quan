@@ -1,6 +1,6 @@
 "use client";
 import React, { ReactNode } from "react";
-import { createGlobalStyle, ThemeProvider, styled } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { darkTheme } from "../theme/theme";
 
 const GlobalStyles = createGlobalStyle`
@@ -40,7 +40,3 @@ function MainLayout({ children }: { children: ReactNode }) {
 }
 
 export default MainLayout;
-
-const Main = styled.main`
-  grid-area: main;
-`;
