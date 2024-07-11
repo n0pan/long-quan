@@ -12,7 +12,7 @@ export default function Page() {
           <ExperienceTitle>
             Front-end Developer @ <Accent>Taiga Motors, Montréal</Accent>
           </ExperienceTitle>
-          <ExperienceYear>JANUARY 2022 - PRESENT</ExperienceYear>
+          <ExperienceYear>JANUARY 2022 - JULY 2024</ExperienceYear>
           <ul>
             <li>
               Led the design and integration of the front-end architecture
