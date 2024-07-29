@@ -30,11 +30,6 @@ export default function Panel() {
         <h2>Education</h2>
         <List>
           <li>
-            Computer Science (Software Systems) @{" "}
-            <Accent>Concordia University, Montréal</Accent>
-            <p style={{ marginTop: 4 }}>2013 - 2015</p>
-          </li>
-          <li>
             DEC - Arts, Lettres & Communications (Création multimédia) @{" "}
             <Accent>Collège Jean-de-Brébeuf, Montréal</Accent>
             <p style={{ marginTop: 4 }}>2011 - 2013</p>
