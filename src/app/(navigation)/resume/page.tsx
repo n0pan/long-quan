@@ -10,6 +10,12 @@ export default function Page() {
         <h2>Experience</h2>
         <ExperienceContainer>
           <ExperienceTitle>
+            Full Stack Engineer @ <Accent>Stealth Company, Bay Area</Accent>
+          </ExperienceTitle>
+          <ExperienceYear>JULY 2024 - PRESENT</ExperienceYear>
+        </ExperienceContainer>
+        <ExperienceContainer>
+          <ExperienceTitle>
             Front-end Developer @ <Accent>Taiga Motors, Montréal</Accent>
           </ExperienceTitle>
           <ExperienceYear>JANUARY 2022 - JULY 2024</ExperienceYear>
