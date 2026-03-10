@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 
 function MainLayout({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+  return <div className="mx-auto max-w-6xl px-4 sm:px-6">{children}</div>;
 }
 
 export default MainLayout;
