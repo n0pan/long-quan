@@ -20,7 +20,7 @@ function ProfileHeader() {
     <header
       className={cn(
         "bg-bg px-10 py-10 flex justify-center",
-        isHome ? "" : "border-b border-border",
+        isHome ? "" : "border-b border-border"
       )}
     >
       <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
@@ -42,7 +42,7 @@ function ProfileHeader() {
           <div className="flex flex-col gap-1">
             <Logo />
             <p className="text-fg-muted text-sm m-0">
-              Web Developer &bull; Montréal
+              Software Developer &bull; Montréal
             </p>
           </div>
 
@@ -64,7 +64,7 @@ function ProfileHeader() {
                           "text-sm no-underline transition-colors duration-150",
                           isActive
                             ? "text-pink font-medium"
-                            : "text-fg-muted hover:text-fg font-normal",
+                            : "text-fg-muted hover:text-fg font-normal"
                         )}
                       >
                         {label}

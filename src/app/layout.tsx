@@ -12,7 +12,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Long-Quan",
-  description: "A Montreal-based web developer's personal website.",
+  description: "A Montreal-based software developer's personal website.",
 };
 
 export default function RootLayout({
