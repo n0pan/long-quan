@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Karla } from "next/font/google";
 import "./globals.css";
-import MainLayout from "./components/MainLayout";
+import MainLayout from "./components/main-layout";
 
 const karla = Karla({ subsets: ["latin"] });
 

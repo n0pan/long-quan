@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import Logo from "./Logo";
+import Logo from "./logo";
 import { cn } from "@/lib/utils";
 
 function ProfileHeader() {

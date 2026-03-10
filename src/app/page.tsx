@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileHeader from "./components/ProfileHeader";
+import ProfileHeader from "./components/profile-header";
 
 export default function Home() {
   return (
