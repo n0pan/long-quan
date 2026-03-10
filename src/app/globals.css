@@ -1,14 +1,104 @@
 @import "tailwindcss";
 
+/* ─── Kanagawa Design Tokens ─────────────────────────────────────────────── */
 @theme {
-  --color-primary: #0f2032;
-  --color-secondary: #cfd2d6;
-  --color-pink: #c8568d;
+  /* Backgrounds */
+  --color-bg: #1f1f28;
+  --color-bg-dim: #16161d;
+  --color-surface: #2a2a37;
 
-  --breakpoint-xs: 600px;
+  /* Text */
+  --color-fg: #dcd7ba;
+  --color-fg-muted: #c8c093;
+  --color-fg-dim: #727169;
+
+  /* Brand accent — coral pink */
+  --color-pink: #ff5d62;
+  --color-pink-hover: #ff7b7f;
+
+  /* Emphasis — golden yellow */
+  --color-yellow: #e6c384;
+  --color-yellow-dim: #c0a36e;
+
+  /* Success — bright sage green */
+  --color-green: #98bb6c;
+  --color-green-dim: #76946a;
+
+  /* Info */
+  --color-blue: #7fb4ca;
+  --color-blue-dim: #7e9cd8;
+
+  /* Other palette colors */
+  --color-orange: #ffa066;
+  --color-purple: #957fb8;
+  --color-cyan: #6a9589;
+  --color-red: #e82424;
+
+  /* Borders */
+  --color-border: #2a2a37;
+  --color-border-strong: #54546d;
+
+  /* Selection */
+  --color-selection-bg: #2d4f67;
+
+  /* Semantic aliases (used by shadcn/ui components) */
+  --color-background: #1f1f28;
+  --color-card: #2a2a37;
+  --color-card-foreground: #dcd7ba;
+  --color-muted-foreground: #727169;
+  --color-text: #dcd7ba;
+  --color-text-muted: #727169;
+  --color-accent: #ff5d62;
+  --color-accent-hover: #ff7b7f;
+  --color-primary: #1f1f28;
+  --color-secondary: #2a2a37;
+  --color-panel: #1f1f28;
+
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Radius — minimal, terminal-like */
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+  --radius-full: 9999px;
+
+  /* Shadows — barely visible on dark bg */
+  --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* ─── shadcn/ui CSS Variable Mappings ───────────────────────────────────── */
+:root {
+  --background: 31 31 40; /* #1f1f28 */
+  --foreground: 220 215 186; /* #dcd7ba */
+  --card: 42 42 55; /* #2a2a37 */
+  --card-foreground: 220 215 186;
+  --primary: 31 31 40;
+  --primary-foreground: 220 215 186;
+  --secondary: 42 42 55;
+  --secondary-foreground: 220 215 186;
+  --muted: 42 42 55;
+  --muted-foreground: 114 113 105; /* #727169 */
+  --accent: 255 93 98; /* #ff5d62 */
+  --accent-foreground: 220 215 186;
+  --destructive: 232 36 36;
+  --destructive-foreground: 220 215 186;
+  --border: 42 42 55; /* #2a2a37 */
+  --ring: 255 93 98;
+  --radius: 2px;
+}
+
+/* ─── Base Styles ────────────────────────────────────────────────────────── */
 @layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   html,
   body {
     height: 100%;
@@ -16,20 +106,125 @@
   }
 
   body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-size: 15px;
     font-weight: 400;
+    line-height: 1.65;
     margin: 0;
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Text selection — Kanagawa blue */
+  ::selection {
+    background-color: var(--color-selection-bg);
+    color: var(--color-fg);
+  }
+
+  /* ── Headings ──────────────────────────────────────────────────────────── */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 1.875rem;
+    letter-spacing: -0.01em;
+  } /* 30px */
   h2 {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+  }
+  h3 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+  } /* 15px */
+  h4 {
+    font-size: 0.875rem;
+    font-weight: 500;
   }
 
+  p {
+    margin-block-start: 0;
+    margin-block-end: 0.625rem;
+  }
+  p:last-child {
+    margin-block-end: 0;
+  }
+
+  /* ── Links ─────────────────────────────────────────────────────────────── */
   a {
     color: var(--color-pink);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
+    transition: color 0.15s ease;
+  }
+  a:hover {
+    color: var(--color-pink-hover);
+  }
+
+  /* ── Lists ─────────────────────────────────────────────────────────────── */
+  ul,
+  ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 0;
+    line-height: 1.65;
+  }
+
+  /* ── Focus States ──────────────────────────────────────────────────────── */
+  :focus-visible {
+    outline: 1px solid var(--color-pink);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* ─── Utilities ─────────────────────────────────────────────────────────── */
+@layer utilities {
+  /* Terminal divider — full-width rule using the border color */
+  .term-rule {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-border);
+  }
+
+  /* Section label above a divider */
+  .term-section-label {
+    font-size: 0.6875rem; /* 11px */
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+  }
+
+  /* Checkmark prefix rendered via CSS */
+  .term-check::before {
+    content: "✓ ";
+    color: var(--color-green);
+  }
+
+  /* Prompt prefix */
+  .term-prompt::before {
+    content: "> ";
+    color: var(--color-green-dim);
   }
 }

@@ -1,10 +1,14 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Karla } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import MainLayout from "./components/main-layout";
 
-const karla = Karla({ subsets: ["latin"] });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
   title: "Long-Quan",
@@ -18,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={karla.className}>
+      <body className={jetbrainsMono.className}>
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

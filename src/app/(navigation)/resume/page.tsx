@@ -1,175 +1,219 @@
 import React from "react";
+import Accent from "@/app/components/accent";
 
-function Accent({ children }: { children: React.ReactNode }) {
-  return <span className="text-pink">{children}</span>;
+interface ExperienceProps {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  responsibilities?: React.ReactNode[];
+  stack?: string[];
+}
+
+function Experience({
+  title,
+  company,
+  location,
+  period,
+  responsibilities,
+  stack,
+}: ExperienceProps) {
+  return (
+    <div className="flex flex-col gap-4 py-6 border-b border-border last:border-b-0">
+      {/* Header row */}
+      <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+        <div className="text-sm font-semibold text-fg leading-snug">
+          {title} <span className="text-fg-dim font-normal">@</span>{" "}
+          <Accent>{company}</Accent>
+          <span className="text-fg-dim font-normal">, {location}</span>
+        </div>
+        <div className="text-xs text-yellow-dim tracking-wider uppercase shrink-0">
+          {period}
+        </div>
+      </div>
+
+      {/* Responsibilities */}
+      {responsibilities && (
+        <ul className="flex flex-col gap-1.5">
+          {responsibilities.map((item, i) => (
+            <li
+              key={i}
+              className="flex gap-2 text-sm text-fg-muted leading-relaxed"
+            >
+              <span className="text-green shrink-0 select-none">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {/* Tech stack */}
+      {stack && (
+        <p className="text-xs text-fg-dim m-0">{stack.join(" \u00b7 ")}</p>
+      )}
+    </div>
+  );
 }
 
 export default function Page() {
   return (
-    <>
-      <div className="px-12 py-6">
-        <h2>Experience</h2>
-        <div className="mb-11">
-          <h3 className="mb-0">
-            Full Stack Engineer @ <Accent>Stealth Company, Bay Area</Accent>
-          </h3>
-          <p className="mt-1">JULY 2024 - PRESENT</p>
-        </div>
-        <div className="mb-11">
-          <h3 className="mb-0">
-            Front-end Developer @ <Accent>Taiga Motors, Montréal</Accent>
-          </h3>
-          <p className="mt-1">JANUARY 2022 - JULY 2024</p>
-          <ul>
-            <li>
-              Led the design and integration of the front-end architecture
-              across various applications;
-            </li>
-            <li>Led the launch of the official Taiga mobile application;</li>
-            <li>
-              Integrated reactive and dynamic user interfaces using{" "}
-              <Accent>HTML</Accent>, <Accent>CSS</Accent>,{" "}
-              <Accent>JavaScript</Accent>, <Accent>Svelte</Accent> and{" "}
-              <Accent>Rollup</Accent> aimed for an embedded system;
-            </li>
-            <li>
+    <div className="px-10 py-10 max-w-3xl">
+      {/* Section heading */}
+      <div className="flex items-center gap-3 mb-2">
+        <span className="term-section-label">Experience</span>
+        <span className="flex-1 h-px bg-border-strong/40" aria-hidden />
+      </div>
+
+      <div className="flex flex-col">
+        <Experience
+          title="Full Stack Engineer"
+          company="Stealth Company"
+          location="Bay Area"
+          period="Jul 2024 – Present"
+        />
+
+        <Experience
+          title="Front-end Developer"
+          company="Taiga Motors"
+          location="Montréal"
+          period="Jan 2022 – Jul 2024"
+          responsibilities={[
+            "Led the design and integration of the front-end architecture across various applications",
+            "Led the launch of the official Taiga mobile application",
+            <>
+              Integrated reactive and dynamic UIs using <Accent>HTML</Accent>,{" "}
+              <Accent>CSS</Accent>, <Accent>JavaScript</Accent>,{" "}
+              <Accent>Svelte</Accent> and <Accent>Rollup</Accent> for an
+              embedded system
+            </>,
+            <>
               Led the design and integration for a modern web app using{" "}
               <Accent>React</Accent>, <Accent>NextJS</Accent> and{" "}
-              <Accent>Docker</Accent>;
-            </li>
-            <li>
-              Helped design, scope, develop and release 2{" "}
-              <Accent>Mobile apps</Accent> using <Accent>React Native</Accent>;
-            </li>
-            <li>Created and maintained documentation;</li>
-            <li>Assisted in defining priorities for various projects.</li>
-          </ul>
-          <p>
-            <b>Stack used:</b> React Native, JavaScript, TypeScript, Svelte,
-            Rollup, Git, NextJS, Docker, AWS.
-          </p>
-        </div>
-        <div className="mb-11">
-          <h3 className="mb-0">
-            Tech Lead - Customer Experience @ <Accent>Cook it, Montréal</Accent>
-          </h3>
-          <p className="mt-1">FEBRUARY 2021 - JANUARY 2022</p>
-          <ul>
-            <li>
+              <Accent>Docker</Accent>
+            </>,
+            <>
+              Helped design, scope, develop and release 2 mobile apps using{" "}
+              <Accent>React Native</Accent>
+            </>,
+            "Created and maintained documentation",
+            "Assisted in defining priorities for various projects",
+          ]}
+          stack={[
+            "React Native",
+            "JavaScript",
+            "TypeScript",
+            "Svelte",
+            "Rollup",
+            "NextJS",
+            "Docker",
+            "AWS",
+            "Git",
+          ]}
+        />
+
+        <Experience
+          title="Tech Lead – Customer Experience"
+          company="Cook it"
+          location="Montréal"
+          period="Feb 2021 – Jan 2022"
+          responsibilities={[
+            <>
               Acted as interim <Accent>Scrum Master</Accent> and interim{" "}
-              <Accent>Product Owner</Accent>;
-            </li>
-            <li>Held interviews, hired and trained new employees;</li>
-            <li>Improved hiring process and onboarding process;</li>
-            <li>
-              Created various internal tools and automated various processes to
-              improve the <Accent>deployment pipeline</Accent>
-            </li>
-            <li>
-              Contributed in the migration of our front-end legacy towards a new
-              architecture in <Accent>React</Accent>,{" "}
-              <Accent>TypeScript</Accent> and <Accent>Material UI</Accent>;
-            </li>
-            <li>
-              Contributed in the migration of our back-end legacy towards a new
-              architecture in <Accent>TypeScript</Accent> and{" "}
-              <Accent>Node</Accent>
-            </li>
-            <li>
-              Implemented a Learning Day during our sprints to boost team morale
-              and motivation.
-            </li>
-          </ul>
-        </div>
-        <div className="mb-11">
-          <h3 className="mb-0">
-            Front-end Developer @ <Accent>Cook it, Montréal</Accent>
-          </h3>
-          <p className="mt-1">DECEMBER 2017 - FEBRUARY 2021</p>
-          <ul>
-            <li>
-              Joined the team when the tech department consisted of just the CTO
-              and assisted him in building the platform from scratch;
-            </li>
-            <li>
-              Designed and integrated new tools depending on internal and
-              external needs;
-            </li>
-            <li>
-              Created reusable <Accent>React</Accent> components that are widely
-              used throughout the platform;
-            </li>
-            <li>Helped design various components the Product Designer;</li>
-            <li>
-              Assisted with the implementation <Accent>GraphQL</Accent> and{" "}
-              <Accent>REST API</Accent> using Node;
-            </li>
-            <li>
-              Assisted with the maintenance of a <Accent>Mongo</Accent>{" "}
-              database;
-            </li>
-            <li>
-              Helped plan the migration of our legacy code towards an{" "}
+              <Accent>Product Owner</Accent>
+            </>,
+            "Held interviews, hired and trained new employees",
+            "Improved hiring process and onboarding process",
+            <>
+              Created internal tools and automated processes to improve the{" "}
+              <Accent>deployment pipeline</Accent>
+            </>,
+            <>
+              Contributed to migrating the front-end legacy to{" "}
+              <Accent>React</Accent>, <Accent>TypeScript</Accent> and{" "}
+              <Accent>Material UI</Accent>
+            </>,
+            <>
+              Contributed to migrating the back-end legacy to{" "}
+              <Accent>TypeScript</Accent> and <Accent>Node</Accent>
+            </>,
+            "Implemented a Learning Day during sprints to boost team morale",
+          ]}
+        />
+
+        <Experience
+          title="Front-end Developer"
+          company="Cook it"
+          location="Montréal"
+          period="Dec 2017 – Feb 2021"
+          responsibilities={[
+            "Joined the team when the tech department was just the CTO; helped build the platform from scratch",
+            "Designed and integrated new tools depending on internal and external needs",
+            <>
+              Created reusable <Accent>React</Accent> components used throughout
+              the platform
+            </>,
+            "Helped design various components with the Product Designer",
+            <>
+              Assisted with the implementation of <Accent>GraphQL</Accent> and{" "}
+              <Accent>REST API</Accent> using Node
+            </>,
+            <>
+              Assisted with the maintenance of a <Accent>MongoDB</Accent>{" "}
+              database
+            </>,
+            <>
+              Helped plan migration of legacy code towards an{" "}
               <Accent>Onion Architecture</Accent> API in <Accent>Node</Accent>
-            </li>
-          </ul>
-          <p>
-            <b>
-              Stack used: React, Meteor, Node, TypeScript, GraphQL, Git, Docker.
-            </b>
-          </p>
-        </div>
-        <div className="mb-11">
-          <h3 className="mb-0">
-            Freelance Web Developer @ <Accent>Spotlyne, Montréal</Accent>
-          </h3>
-          <p className="mt-1">JANUARY 2019 - SEPTEMBER 2020</p>
-          <ul>
-            <li>
-              Designed and integrated new pages depending on client needs;
-            </li>
-            <li>
-              Created reusable <Accent>React</Accent> components that are widely
-              used throughout the platform;
-            </li>
-            <li>
-              Integrated web pages and components based on mockups provided by
-              an external Web Designer;
-            </li>
-            <li>
-              Assisted with the maintenance of a <Accent>Mongo</Accent>{" "}
-              database;
-            </li>
-            <li>
-              Spearheaded the project of migrating the application&apos;s design
-              system to Ant Design.
-            </li>
-          </ul>
-          <p>
-            <b>Stack used:</b> React, Meteor, Node, GraphQL, Git.
-          </p>
-        </div>
-        <div className="mb-11">
-          <h3 className="mb-0">
-            Front-end Developer Intern @ <Accent>DFuse, Montréal</Accent>
-          </h3>
-          <p className="mt-1">MAY 2017 - AUGUST 2017</p>
-          <ul>
-            <li>
-              Design and built user interfaces that communicated to the database
-              using <Accent>Meteor DDP</Accent> and <Accent>Web Sockets</Accent>
-              ;
-            </li>
-            <li>Helped design and had creative input on mockups;</li>
-            <li>
-              Added, modified and maintained functionality on the main platform.
-            </li>
-          </ul>
-          <p>
-            <b>Stack used:</b> Meteor, HTML, SASS, Handlebars, Git.
-          </p>
-        </div>
+            </>,
+          ]}
+          stack={[
+            "React",
+            "Meteor",
+            "Node",
+            "TypeScript",
+            "GraphQL",
+            "Docker",
+            "Git",
+          ]}
+        />
+
+        <Experience
+          title="Freelance Web Developer"
+          company="Spotlyne"
+          location="Montréal"
+          period="Jan 2019 – Sep 2020"
+          responsibilities={[
+            "Designed and integrated new pages depending on client needs",
+            <>
+              Created reusable <Accent>React</Accent> components used throughout
+              the platform
+            </>,
+            "Integrated pages and components based on mockups from an external Web Designer",
+            <>
+              Assisted with the maintenance of a <Accent>MongoDB</Accent>{" "}
+              database
+            </>,
+            "Spearheaded the migration of the application's design system to Ant Design",
+          ]}
+          stack={["React", "Meteor", "Node", "GraphQL", "Git"]}
+        />
+
+        <Experience
+          title="Front-end Developer Intern"
+          company="DFuse"
+          location="Montréal"
+          period="May 2017 – Aug 2017"
+          responsibilities={[
+            <>
+              Designed and built UIs communicating with the database via{" "}
+              <Accent>Meteor DDP</Accent> and <Accent>WebSockets</Accent>
+            </>,
+            "Helped design and provided creative input on mockups",
+            "Added, modified and maintained functionality on the main platform",
+          ]}
+          stack={["Meteor", "HTML", "SASS", "Handlebars", "Git"]}
+        />
       </div>
-    </>
+    </div>
   );
 }
