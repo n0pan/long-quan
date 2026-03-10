@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Karla } from "next/font/google";
-import StyledComponentsRegistry from "./lib/registry";
+import "./globals.css";
 import MainLayout from "./components/MainLayout";
 
 const karla = Karla({ subsets: ["latin"] });
@@ -19,9 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={karla.className}>
-        <StyledComponentsRegistry>
-          <MainLayout>{children}</MainLayout>
-        </StyledComponentsRegistry>
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );

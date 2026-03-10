@@ -1,95 +1,64 @@
-"use client";
-
 import React from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Mail, Github, Linkedin } from "lucide-react";
+
+function Accent({ children }: { children: React.ReactNode }) {
+  return <span className="text-pink font-bold">{children}</span>;
+}
 
 export default function Panel() {
   return (
-    <Aside>
+    <aside className="[grid-area:panel] bg-secondary p-6 flex flex-col gap-4 max-w-[400px]">
       <div>
         <h2>Contact Details</h2>
-        <List>
+        <ul className="list-none m-0 p-0 [&_li]:ml-4 [&_li]:mb-4">
           <li>
-            <StyledIcon icon={faEnvelope} height={16} />
+            <Mail size={16} className="text-primary inline mr-2.5" />
             <a href="mailto:longquanhp@gmail.com">longquanhp@gmail.com</a>
           </li>
           <li>
-            <StyledIcon icon={faGithub} height={16} />
+            <Github size={16} className="text-primary inline mr-2.5" />
             <a href="https://github.com/n0pan">n0pan</a>
           </li>
           <li>
-            <StyledIcon icon={faLinkedin} height={16} />
+            <Linkedin size={16} className="text-primary inline mr-2.5" />
             <a href="https://www.linkedin.com/in/longquanhp/">longquanhp</a>
           </li>
-        </List>
+        </ul>
       </div>
       <div>
         <h2>Education</h2>
-        <List>
+        <ul className="list-none m-0 p-0 [&_li]:ml-4 [&_li]:mb-4">
           <li>
             DEC - Arts, Lettres & Communications (Création multimédia) @{" "}
             <Accent>Collège Jean-de-Brébeuf, Montréal</Accent>
-            <p style={{ marginTop: 4 }}>2011 - 2013</p>
+            <p className="mt-1">2011 - 2013</p>
           </li>
-        </List>
+        </ul>
       </div>
       <div>
         <h2>Technical Skills</h2>
-        <List>
+        <ul className="list-none m-0 p-0 [&_li]:ml-4 [&_li]:mb-4">
           <li>
             HTML, CSS, SASS, JavaScript, TypeScript, React, Node, Apollo,
             GraphQL, Git, MongoDB, Jest, VIM, Docker, Azure, Vercel, Next
           </li>
-        </List>
+        </ul>
       </div>
       <div>
         <h2>Soft Skills</h2>
-        <List>
+        <ul className="list-none m-0 p-0 [&_li]:ml-4 [&_li]:mb-4">
           <li>
             Leadership, organization, communication, team work, adaptability,
             problem solving, active listening.
           </li>
-        </List>
+        </ul>
       </div>
       <div>
         <h2>Languages</h2>
-        <List>
+        <ul className="list-none m-0 p-0 [&_li]:ml-4 [&_li]:mb-4">
           <li>French (native), English (native), Vietnamese (fluent)</li>
-        </List>
+        </ul>
       </div>
-    </Aside>
+    </aside>
   );
 }
-
-const Aside = styled.aside`
-  grid-area: panel;
-  background-color: ${(props) => props.theme.secondary};
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 400px;
-`;
-
-const StyledIcon = styled(FontAwesomeIcon)`
-  color: ${(props) => props.theme.primary};
-  margin-right: 10px;
-`;
-
-const List = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  li {
-    margin-left: 15px;
-    margin-bottom: 15px;
-  }
-`;
-
-const Accent = styled.span`
-  color: ${(props) => props.theme.pink};
-  font-weight: 700;
-`;

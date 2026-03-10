@@ -1,34 +1,27 @@
-"use client";
-
 import React, { ReactNode } from "react";
-import { styled } from "styled-components";
 import ProfileHeader from "../../components/ProfileHeader";
 import Panel from "../../components/Panel";
 
-function MainLayout({ children }: { children: ReactNode }) {
+function ResumeLayout({ children }: { children: ReactNode }) {
   return (
-    <Grid>
+    <div
+      className="grid h-full"
+      style={{
+        gridTemplateAreas: `
+          "header header header header"
+          "panel main main main"
+          "panel main main main"
+          "panel main main main"
+          "panel main main main"
+          "panel main main main"
+        `,
+      }}
+    >
       <ProfileHeader />
       <Panel />
-      <Main>{children}</Main>
-    </Grid>
+      <main className="[grid-area:main]">{children}</main>
+    </div>
   );
 }
 
-export default MainLayout;
-
-const Grid = styled.div`
-  display: grid;
-  height: 100%;
-  grid-template-areas:
-    "header header header header"
-    "panel main main main"
-    "panel main main main"
-    "panel main main main"
-    "panel main main main"
-    "panel main main main";
-`;
-
-const Main = styled.main`
-  grid-area: main;
-`;
+export default ResumeLayout;

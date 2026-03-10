@@ -1,117 +1,67 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styled from "styled-components";
 import Image from "next/image";
 import Logo from "./Logo";
+import { cn } from "@/lib/utils";
 
 function ProfileHeader() {
   const pathname = usePathname();
   return (
-    <Header>
-      <LogoContainer>
-        <ImageContainer>
-          <StyledImage
-            src={"/images/header_pictures/lq.jpg"}
+    <header className="[grid-area:header] bg-primary h-[325px] flex flex-col justify-center">
+      <div
+        className={cn(
+          "text-white text-left grid gap-12",
+          "max-[600px]:flex max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:mb-8",
+          "min-[600px]:[grid-template-areas:'photo_name']",
+        )}
+      >
+        <div className="flex flex-col justify-center gap-3 items-end">
+          <Image
+            src="/images/header_pictures/lq.jpg"
             alt="portrait"
             width={200}
             height={200}
             quality={80}
             priority={true}
+            className="rounded-full"
           />
-        </ImageContainer>
-        <Container>
+        </div>
+        <div className="flex flex-col justify-center gap-3">
           <Logo />
-          <Subtitle>Web Developer ● Montreal</Subtitle>
-        </Container>
-      </LogoContainer>
-      <Navigation>
-        <ul>
-          <li>
-            <StyledLink href="/" $active={pathname === "/"}>
+          <h2 className="text-[22px] m-0">Web Developer ● Montreal</h2>
+        </div>
+      </div>
+      <nav className="flex flex-row justify-center">
+        <ul className="list-none text-white m-0 p-0">
+          <li className="inline mr-12">
+            <Link
+              href="/"
+              className={cn(
+                "font-medium no-underline transition-colors hover:text-pink",
+                pathname === "/" ? "text-pink" : "text-white",
+              )}
+            >
               Home
-            </StyledLink>
+            </Link>
           </li>
-          <li>
-            <StyledLink href="/resume" $active={pathname === "/resume"}>
+          <li className="inline mr-12">
+            <Link
+              href="/resume"
+              className={cn(
+                "font-medium no-underline transition-colors hover:text-pink",
+                pathname === "/resume" ? "text-pink" : "text-white",
+              )}
+            >
               Resume
-            </StyledLink>
+            </Link>
           </li>
         </ul>
-      </Navigation>
-    </Header>
+      </nav>
+    </header>
   );
 }
 
 export default ProfileHeader;
-
-const Header = styled.header`
-  grid-area: header;
-  background-color: ${(props) => props.theme.primary};
-  height: 325px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-const LogoContainer = styled.div`
-  color: ${(props) => props.theme.white};
-  text-align: left;
-  display: grid;
-  @media (max-width: 600px) {
-    grid-template-areas:
-      "photo"
-      "name";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  @media (min-width: 600px) {
-    grid-template-areas: "photo name";
-  }
-  gap: 48px;
-`;
-
-const Navigation = styled.nav`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  ul {
-    list-style-type: none;
-    color: ${(props) => props.theme.white};
-    margin: 0;
-    li {
-      display: inline;
-      margin-right: 50px;
-    }
-  }
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 12px;
-`;
-
-const ImageContainer = styled(Container)`
-  align-items: end;
-`;
-
-const StyledImage = styled(Image)`
-  border-radius: 100%;
-`;
-
-const Subtitle = styled.h2`
-  font-size: 22px;
-  margin: 0;
-`;
-
-const StyledLink = styled(Link)<{ $active?: boolean }>`
-  color: ${(props) => (props.$active ? props.theme.pink : props.theme.white)};
-  &:hover {
-    color: ${(props) => props.theme.pink};
-  }
-`;

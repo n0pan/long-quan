@@ -1,24 +1,25 @@
-"use client";
-
 import React from "react";
-import styled from "styled-components";
+
+function Accent({ children }: { children: React.ReactNode }) {
+  return <span className="text-pink">{children}</span>;
+}
 
 export default function Page() {
   return (
     <>
-      <Container>
+      <div className="px-12 py-6">
         <h2>Experience</h2>
-        <ExperienceContainer>
-          <ExperienceTitle>
+        <div className="mb-11">
+          <h3 className="mb-0">
             Full Stack Engineer @ <Accent>Stealth Company, Bay Area</Accent>
-          </ExperienceTitle>
-          <ExperienceYear>JULY 2024 - PRESENT</ExperienceYear>
-        </ExperienceContainer>
-        <ExperienceContainer>
-          <ExperienceTitle>
+          </h3>
+          <p className="mt-1">JULY 2024 - PRESENT</p>
+        </div>
+        <div className="mb-11">
+          <h3 className="mb-0">
             Front-end Developer @ <Accent>Taiga Motors, Montréal</Accent>
-          </ExperienceTitle>
-          <ExperienceYear>JANUARY 2022 - JULY 2024</ExperienceYear>
+          </h3>
+          <p className="mt-1">JANUARY 2022 - JULY 2024</p>
           <ul>
             <li>
               Led the design and integration of the front-end architecture
@@ -47,12 +48,12 @@ export default function Page() {
             <b>Stack used:</b> React Native, JavaScript, TypeScript, Svelte,
             Rollup, Git, NextJS, Docker, AWS.
           </p>
-        </ExperienceContainer>
-        <ExperienceContainer>
-          <ExperienceTitle>
+        </div>
+        <div className="mb-11">
+          <h3 className="mb-0">
             Tech Lead - Customer Experience @ <Accent>Cook it, Montréal</Accent>
-          </ExperienceTitle>
-          <ExperienceYear>FEBRUARY 2021 - JANUARY 2022</ExperienceYear>
+          </h3>
+          <p className="mt-1">FEBRUARY 2021 - JANUARY 2022</p>
           <ul>
             <li>
               Acted as interim <Accent>Scrum Master</Accent> and interim{" "}
@@ -79,12 +80,12 @@ export default function Page() {
               and motivation.
             </li>
           </ul>
-        </ExperienceContainer>
-        <ExperienceContainer>
-          <ExperienceTitle>
+        </div>
+        <div className="mb-11">
+          <h3 className="mb-0">
             Front-end Developer @ <Accent>Cook it, Montréal</Accent>
-          </ExperienceTitle>
-          <ExperienceYear>DECEMBER 2017 - FEBRUARY 2021</ExperienceYear>
+          </h3>
+          <p className="mt-1">DECEMBER 2017 - FEBRUARY 2021</p>
           <ul>
             <li>
               Joined the team when the tech department consisted of just the CTO
@@ -117,12 +118,12 @@ export default function Page() {
               Stack used: React, Meteor, Node, TypeScript, GraphQL, Git, Docker.
             </b>
           </p>
-        </ExperienceContainer>
-        <ExperienceContainer>
-          <ExperienceTitle>
+        </div>
+        <div className="mb-11">
+          <h3 className="mb-0">
             Freelance Web Developer @ <Accent>Spotlyne, Montréal</Accent>
-          </ExperienceTitle>
-          <ExperienceYear>JANUARY 2019 - SEPTEMBER 2020</ExperienceYear>
+          </h3>
+          <p className="mt-1">JANUARY 2019 - SEPTEMBER 2020</p>
           <ul>
             <li>
               Designed and integrated new pages depending on client needs;
@@ -140,19 +141,19 @@ export default function Page() {
               database;
             </li>
             <li>
-              Spearheaded the project of migrating the application’s design
+              Spearheaded the project of migrating the application&apos;s design
               system to Ant Design.
             </li>
           </ul>
           <p>
             <b>Stack used:</b> React, Meteor, Node, GraphQL, Git.
           </p>
-        </ExperienceContainer>
-        <ExperienceContainer>
-          <ExperienceTitle>
+        </div>
+        <div className="mb-11">
+          <h3 className="mb-0">
             Front-end Developer Intern @ <Accent>DFuse, Montréal</Accent>
-          </ExperienceTitle>
-          <ExperienceYear>MAY 2017 - AUGUST 2017</ExperienceYear>
+          </h3>
+          <p className="mt-1">MAY 2017 - AUGUST 2017</p>
           <ul>
             <li>
               Design and built user interfaces that communicated to the database
@@ -167,28 +168,8 @@ export default function Page() {
           <p>
             <b>Stack used:</b> Meteor, HTML, SASS, Handlebars, Git.
           </p>
-        </ExperienceContainer>
-      </Container>
+        </div>
+      </div>
     </>
   );
 }
-
-const Container = styled.div`
-  padding: 24px 48px;
-`;
-
-const ExperienceContainer = styled.div`
-  margin-bottom: 45px;
-`;
-
-const ExperienceTitle = styled.h3`
-  margin-bottom: 0px;
-`;
-
-const Accent = styled.span`
-  color: ${(props) => props.theme.pink};
-`;
-
-const ExperienceYear = styled.p`
-  margin-top: 4px;
-`;
