@@ -30,10 +30,10 @@ export default function Panel() {
             <li className="flex items-center gap-2.5 text-sm">
               <Mail size={13} className="text-green shrink-0" />
               <a
-                href="mailto:longquanhp@gmail.com"
+                href="mailto:lq@long-quan.com"
                 className="text-fg-muted hover:text-pink transition-colors duration-150 break-all"
               >
-                longquanhp@gmail.com
+                lq@long-quan.com
               </a>
             </li>
             <li className="flex items-center gap-2.5 text-sm">
@@ -59,32 +59,45 @@ export default function Panel() {
 
         {/* Education */}
         <PanelSection title="Education">
-          <div className="flex flex-col gap-0.5 text-sm text-fg leading-relaxed">
-            <p className="text-fg-muted m-0">
-              DEC – Arts, Lettres &amp; Communications
-            </p>
-            <p className="text-fg-dim text-xs m-0">Création multimédia</p>
-            <p className="m-0 mt-1">
-              <Accent>Collège Jean-de-Brébeuf</Accent>
-              <span className="text-fg-muted">, Montréal</span>
-            </p>
-            <p className="text-fg-dim text-xs m-0">2011 – 2013</p>
+          <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+              <div className="text-sm font-semibold text-fg leading-snug m-0">
+                Arts, Lettres & Communications (DEC){" "}
+                <span className="text-fg-dim font-normal">@</span>{" "}
+                <Accent>Collège Jean-de-Brébeuf</Accent>
+                <span className="text-fg-dim font-normal">, Montréal</span>
+              </div>
+            </div>
+
+            <div className="text-xs text-yellow-dim tracking-wider uppercase shrink-0">
+              2011 - 2013
+            </div>
           </div>
         </PanelSection>
 
         {/* Technical Skills */}
         <PanelSection title="Stack">
-          <p className="text-sm text-fg-muted leading-relaxed m-0">
-            HTML &bull; CSS &bull; SASS &bull; JavaScript &bull; TypeScript
-            &bull; React &bull; Node &bull; Apollo &bull; GraphQL &bull; Git
-            &bull; MongoDB &bull; Jest &bull; Docker &bull; Azure &bull; Vercel
-            &bull; Next
-          </p>
+          <div className="flex flex-col gap-2 text-sm text-fg-muted">
+            <p className="m-0 font-medium text-fg">Frontend</p>
+            <p className="m-0 text-xs">
+              React &bull; React Native &bull; NextJS &bull; TypeScript &bull;
+              Svelte &bull; SASS
+            </p>
+            <p className="m-0 font-medium text-fg mt-2">Backend</p>
+            <p className="m-0 text-xs">
+              Node &bull; Meteor &bull; GraphQL &bull; Python &bull; PostgreSQL
+              &bull; Supabase
+            </p>
+            <p className="m-0 font-medium text-fg mt-2">DevOps</p>
+            <p className="m-0 text-xs">Docker &bull; AWS</p>
+            <p className="m-0 font-medium text-fg mt-2">AI</p>
+            <p className="m-0 text-xs">OpenAI API &bull; MCP &bull; LiveKit</p>
+          </div>
         </PanelSection>
 
         {/* Soft Skills */}
         <PanelSection title="Soft Skills">
-          <p className="text-sm text-fg-muted leading-relaxed m-0">
+          <p className="text-xs text-fg-muted leading-relaxed m-0">
             Leadership &bull; Organization &bull; Communication &bull; Teamwork
             &bull; Adaptability &bull; Problem solving &bull; Active listening
           </p>
@@ -92,7 +105,7 @@ export default function Panel() {
 
         {/* Languages */}
         <PanelSection title="Languages">
-          <ul className="flex flex-col gap-2 text-sm">
+          <ul className="flex flex-col gap-2 text-xs">
             {[
               { lang: "French", level: "native" },
               { lang: "English", level: "native" },
