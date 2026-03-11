@@ -2,4 +2,4 @@
 
 Hi, welcome to my personal page.
 
-**Built with:** React, Next, Styled Components.
+**Built with:** React, Next, OpenRouter.
