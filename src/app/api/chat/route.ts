@@ -1,5 +1,5 @@
-import OpenAI from "openai";
 import { NextRequest, NextResponse } from "next/server";
+import OpenAI from "openai";
 
 const SYSTEM_PROMPT = `You are a personal assistant on Long-Quan Hoang-Pham's portfolio website. Your job is to answer questions about Long-Quan's professional background, experience, and skills — and nothing else.
 
@@ -66,8 +66,8 @@ English: native
 Vietnamese: fluent`;
 
 export interface ChatMessage {
-  role: "user" | "assistant";
   content: string;
+  role: "assistant" | "user";
 }
 
 export async function POST(req: NextRequest) {
@@ -94,14 +94,14 @@ export async function POST(req: NextRequest) {
   }
 
   const client = new OpenAI({
-    baseURL: "https://openrouter.ai/api/v1",
     apiKey,
+    baseURL: "https://openrouter.ai/api/v1",
   });
 
   try {
     const stream = await client.chat.completions.create({
+      messages: [{ content: SYSTEM_PROMPT, role: "system" }, ...messages],
       model: "openrouter/free",
-      messages: [{ role: "system", content: SYSTEM_PROMPT }, ...messages],
       stream: true,
     });
 

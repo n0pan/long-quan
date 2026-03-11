@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
-import ProfileHeader from "../../components/profile-header";
+
 import Panel from "../../components/panel";
+import ProfileHeader from "../../components/profile-header";
 
 function ResumeLayout({ children }: { children: ReactNode }) {
   return (

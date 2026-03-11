@@ -1,17 +1,18 @@
 "use client";
 
 import React, {
-  useRef,
-  useEffect,
-  useState,
   useCallback,
+  useEffect,
   useLayoutEffect,
+  useRef,
+  useState,
 } from "react";
+
 import { cn } from "@/lib/utils";
 
 interface Message {
-  role: "user" | "assistant";
   content: string;
+  role: "assistant" | "user";
 }
 
 const SUGGESTIONS = [
@@ -55,20 +56,20 @@ export default function TerminalChat() {
       const trimmed = text.trim();
       if (!trimmed || isStreaming) return;
 
-      const userMessage: Message = { role: "user", content: trimmed };
+      const userMessage: Message = { content: trimmed, role: "user" };
       const newMessages = [...messages, userMessage];
       setMessages(newMessages);
       setInput("");
       setIsStreaming(true);
 
       // Placeholder for the streaming response
-      setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
+      setMessages((prev) => [...prev, { content: "", role: "assistant" }]);
 
       try {
         const res = await fetch("/api/chat", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ messages: newMessages }),
+          headers: { "Content-Type": "application/json" },
+          method: "POST",
         });
 
         if (!res.ok) {
@@ -78,8 +79,8 @@ export default function TerminalChat() {
           setMessages((prev) => {
             const updated = [...prev];
             updated[updated.length - 1] = {
-              role: "assistant",
               content: `error: ${err.error ?? "something went wrong"}`,
+              role: "assistant",
             };
             return updated;
           });
@@ -97,8 +98,8 @@ export default function TerminalChat() {
           setMessages((prev) => {
             const updated = [...prev];
             updated[updated.length - 1] = {
-              role: "assistant",
               content: updated[updated.length - 1].content + chunk,
+              role: "assistant",
             };
             return updated;
           });
@@ -107,8 +108,8 @@ export default function TerminalChat() {
         setMessages((prev) => {
           const updated = [...prev];
           updated[updated.length - 1] = {
-            role: "assistant",
             content: "error: could not reach the server",
+            role: "assistant",
           };
           return updated;
         });
@@ -142,9 +143,9 @@ export default function TerminalChat() {
 
         {/* Message history */}
         <div
-          ref={scrollRef}
           className="px-4 py-3 flex flex-col gap-2 overflow-y-auto"
-          style={{ minHeight: "8rem", maxHeight: "14rem" }}
+          ref={scrollRef}
+          style={{ maxHeight: "14rem", minHeight: "8rem" }}
         >
           {messages.length === 0 && (
             <div className="flex flex-col gap-3">
@@ -154,15 +155,15 @@ export default function TerminalChat() {
               <div className="flex flex-wrap gap-2">
                 {SUGGESTIONS.map((s) => (
                   <button
+                    className={cn(
+                      "text-xs text-fg-dim border border-border-strong rounded px-2 py-1",
+                      "hover:text-fg hover:border-fg-dim transition-colors duration-150 cursor-pointer bg-transparent"
+                    )}
                     key={s}
                     onClick={(e) => {
                       e.stopPropagation();
                       sendMessage(s);
                     }}
-                    className={cn(
-                      "text-xs text-fg-dim border border-border-strong rounded px-2 py-1",
-                      "hover:text-fg hover:border-fg-dim transition-colors duration-150 cursor-pointer bg-transparent"
-                    )}
                   >
                     {s}
                   </button>
@@ -172,7 +173,7 @@ export default function TerminalChat() {
           )}
 
           {messages.map((msg, i) => (
-            <div key={i} className="flex flex-col gap-0.5">
+            <div className="flex flex-col gap-0.5" key={i}>
               {msg.role === "user" ? (
                 <div className="flex gap-2 text-sm">
                   <span className="text-green shrink-0 select-none">›</span>
@@ -200,31 +201,31 @@ export default function TerminalChat() {
           <div className="relative flex-1 flex items-center">
             {/* Hidden span used to measure rendered text width */}
             <span
-              ref={measureRef}
               aria-hidden
               className="absolute invisible whitespace-pre text-sm pointer-events-none"
+              ref={measureRef}
             >
               {input}
             </span>
             <input
-              ref={inputRef}
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={handleKeyDown}
-              onFocus={() => setIsFocused(true)}
-              onBlur={() => setIsFocused(false)}
-              disabled={isStreaming}
-              placeholder={isStreaming ? "" : "type your question..."}
+              autoCapitalize="off"
               autoComplete="off"
               autoCorrect="off"
-              autoCapitalize="off"
-              spellCheck={false}
               className={cn(
                 "w-full bg-transparent border-none outline-none text-sm text-fg",
                 "placeholder:text-fg-dim caret-transparent",
                 "disabled:opacity-50 disabled:cursor-not-allowed"
               )}
+              disabled={isStreaming}
+              onBlur={() => setIsFocused(false)}
+              onChange={(e) => setInput(e.target.value)}
+              onFocus={() => setIsFocused(true)}
+              onKeyDown={handleKeyDown}
+              placeholder={isStreaming ? "" : "type your question..."}
+              ref={inputRef}
+              spellCheck={false}
+              type="text"
+              value={input}
             />
             {/* Block caret — only shown when focused and not streaming */}
             {isFocused && !isStreaming && (
