@@ -1,11 +1,13 @@
 "use client";
 
-import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
-import Logo from "./logo";
+import React from "react";
+
 import { cn } from "@/lib/utils";
+
+import Logo from "./logo";
 
 const navLinks = [
   { href: "/", label: "home" },
@@ -27,13 +29,13 @@ function ProfileHeader() {
         {/* Photo */}
         <div className="shrink-0 order-2 sm:order-1">
           <Image
-            src="/images/header_pictures/lq.jpg"
             alt="Portrait of Long-Quan Hoang-Pham"
-            width={100}
-            height={100}
-            quality={85}
-            priority
             className="rounded-full object-cover border-2 border-border-strong"
+            height={100}
+            priority
+            quality={85}
+            src="/images/header_pictures/lq.jpg"
+            width={100}
           />
         </div>
 
@@ -59,13 +61,13 @@ function ProfileHeader() {
                     )}
                     <li>
                       <Link
-                        href={href}
                         className={cn(
                           "text-sm no-underline transition-colors duration-150",
                           isActive
                             ? "text-pink font-medium"
                             : "text-fg-muted hover:text-fg font-normal"
                         )}
+                        href={href}
                       >
                         {label}
                       </Link>

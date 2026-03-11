@@ -1,23 +1,11 @@
+import { Github, Linkedin, Mail } from "lucide-react";
 import React from "react";
-import { Mail, Github, Linkedin } from "lucide-react";
+
 import Accent from "./accent";
 
 interface PanelSectionProps {
-  title: string;
   children: React.ReactNode;
-}
-
-function PanelSection({ title, children }: PanelSectionProps) {
-  return (
-    <div className="flex flex-col gap-3">
-      {/* ─── SECTION TITLE ─────────────────────────────────── */}
-      <div className="flex items-center gap-2">
-        <span className="term-section-label">{title}</span>
-        <span className="flex-1 h-px bg-border-strong/40" aria-hidden />
-      </div>
-      {children}
-    </div>
-  );
+  title: string;
 }
 
 export default function Panel() {
@@ -28,28 +16,28 @@ export default function Panel() {
         <PanelSection title="Contact">
           <ul className="flex flex-col gap-2.5">
             <li className="flex items-center gap-2.5 text-sm">
-              <Mail size={13} className="text-green shrink-0" />
+              <Mail className="text-green shrink-0" size={13} />
               <a
-                href="mailto:lq@long-quan.com"
                 className="text-fg-muted hover:text-pink transition-colors duration-150 break-all"
+                href="mailto:lq@long-quan.com"
               >
                 lq@long-quan.com
               </a>
             </li>
             <li className="flex items-center gap-2.5 text-sm">
-              <Github size={13} className="text-green shrink-0" />
+              <Github className="text-green shrink-0" size={13} />
               <a
-                href="https://github.com/n0pan"
                 className="text-fg-muted hover:text-pink transition-colors duration-150"
+                href="https://github.com/n0pan"
               >
                 github.com/n0pan
               </a>
             </li>
             <li className="flex items-center gap-2.5 text-sm">
-              <Linkedin size={13} className="text-green shrink-0" />
+              <Linkedin className="text-green shrink-0" size={13} />
               <a
-                href="https://www.linkedin.com/in/longquanhp/"
                 className="text-fg-muted hover:text-pink transition-colors duration-150"
+                href="https://www.linkedin.com/in/longquanhp/"
               >
                 in/longquanhp
               </a>
@@ -111,7 +99,7 @@ export default function Panel() {
               { lang: "English", level: "native" },
               { lang: "Vietnamese", level: "fluent" },
             ].map(({ lang, level }) => (
-              <li key={lang} className="flex items-center justify-between">
+              <li className="flex items-center justify-between" key={lang}>
                 <span className="text-fg-muted">{lang}</span>
                 <span className="text-green text-xs">✓ {level}</span>
               </li>
@@ -120,5 +108,18 @@ export default function Panel() {
         </PanelSection>
       </div>
     </aside>
+  );
+}
+
+function PanelSection({ children, title }: PanelSectionProps) {
+  return (
+    <div className="flex flex-col gap-3">
+      {/* ─── SECTION TITLE ─────────────────────────────────── */}
+      <div className="flex items-center gap-2">
+        <span className="term-section-label">{title}</span>
+        <span aria-hidden className="flex-1 h-px bg-border-strong/40" />
+      </div>
+      {children}
+    </div>
   );
 }
