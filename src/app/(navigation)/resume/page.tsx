@@ -23,7 +23,7 @@ export default function Page() {
 
       <div className="flex flex-col">
         <Experience
-          company="AI Venture Studio (Stealth)"
+          company="Woodside AI Venture Studio"
           description="Collaborated within a stealth AI venture studio to identify and engineer high-impact AI applications for different sectors. Focused on moving from 0-to-1 by building reusable foundational technology that accelerated the development of mission-critical, AI-native products."
           location="Palo Alto"
           period="Jul 2024 – Mar 2026"

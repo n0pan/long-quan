@@ -18,7 +18,7 @@ LinkedIn: linkedin.com/in/longquanhp
 
 --- WORK EXPERIENCE ---
 
-Software Engineer @ AI Venture Studio (Stealth), Palo Alto
+Software Engineer @ Woodside AI Venture Studio, Palo Alto
 Jul 2024 – Mar 2026
 Collaborated within a stealth AI venture studio to identify and engineer high-impact AI applications for different sectors. Focused on moving from 0-to-1 by building reusable foundational technology that accelerated the development of mission-critical, AI-native products.
 Stack: React, NextJS, TypeScript, MCP, LiveKit, Supabase, PostgreSQL, OpenAI API
