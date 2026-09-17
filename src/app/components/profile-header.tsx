@@ -22,12 +22,13 @@ function ProfileHeader() {
     <header
       className={cn(
         "bg-bg px-10 py-10 flex justify-center",
-        isHome ? "" : "border-b border-border"
+        "print:px-0 print:pt-0 print:pb-2 print:justify-start print:border-b-0",
+        isHome ? "" : "border-b border-border",
       )}
     >
       <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
         {/* Photo */}
-        <div className="shrink-0 order-2 sm:order-1">
+        <div className="shrink-0 order-2 sm:order-1 print:hidden">
           <Image
             alt="Portrait of Long-Quan Hoang-Pham"
             className="rounded-full object-cover border-2 border-border-strong"
@@ -40,7 +41,7 @@ function ProfileHeader() {
         </div>
 
         {/* Name + subtitle + nav */}
-        <div className="flex flex-col items-center sm:items-start gap-3 order-1 sm:order-2">
+        <div className="flex flex-col items-center sm:items-start print:items-start gap-3 order-1 sm:order-2">
           <div className="flex flex-col gap-1">
             <Logo />
             <p className="text-fg-muted text-sm m-0">
@@ -48,7 +49,7 @@ function ProfileHeader() {
             </p>
           </div>
 
-          <nav>
+          <nav className="print:hidden">
             <ul className="list-none m-0 p-0 flex flex-row items-center gap-1">
               {navLinks.map(({ href, label }, i) => {
                 const isActive = pathname === href;
@@ -65,7 +66,7 @@ function ProfileHeader() {
                           "text-sm no-underline transition-colors duration-150",
                           isActive
                             ? "text-pink font-medium"
-                            : "text-fg-muted hover:text-fg font-normal"
+                            : "text-fg-muted hover:text-fg font-normal",
                         )}
                         href={href}
                       >

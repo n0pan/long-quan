@@ -197,6 +197,43 @@
   }
 }
 
+/* ─── Print Styles ───────────────────────────────────────────────────────── */
+@media print {
+  /* No fixed size: sized to fit one Letter page, which also fits A4 */
+  @page {
+    margin: 12mm 14mm;
+  }
+
+  /* Black and gray, with navy as the single accent */
+  :root {
+    --color-bg: #ffffff;
+    --color-bg-dim: #ffffff;
+    --color-fg: #111111;
+    --color-fg-muted: #333333;
+    --color-fg-dim: #666666;
+    --color-pink: #1f4e79;
+    --color-yellow: #1f4e79;
+    --color-yellow-dim: #555555;
+    --color-green: #555555;
+    --color-border: #d4d4d4;
+    --color-border-strong: #bbbbbb;
+  }
+
+  /* Tailwind sizes are rem-based, so this scales text and spacing together */
+  html {
+    font-size: 13px;
+  }
+
+  body {
+    font-family:
+      ui-sans-serif,
+      -apple-system,
+      "Helvetica Neue",
+      Arial,
+      sans-serif !important;
+  }
+}
+
 /* ─── Utilities ─────────────────────────────────────────────────────────── */
 @layer utilities {
   /* Terminal divider — full-width rule using the border color */

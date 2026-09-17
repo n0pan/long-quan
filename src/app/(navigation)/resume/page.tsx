@@ -2,6 +2,8 @@ import React from "react";
 
 import Accent from "@/app/components/accent";
 
+import PrintButton from "./print-button";
+
 interface ExperienceProps {
   company: string;
   description?: string;
@@ -14,18 +16,26 @@ interface ExperienceProps {
 
 export default function Page() {
   return (
-    <div className="px-10 py-10 max-w-3xl">
+    <div className="px-10 py-10 print:px-0 print:py-3 max-w-3xl print:max-w-none">
       {/* Section heading */}
       <div className="flex items-center gap-3 mb-2">
         <span className="term-section-label">Experience</span>
         <span aria-hidden className="flex-1 h-px bg-border-strong/40" />
+        <PrintButton />
       </div>
 
       <div className="flex flex-col">
         <Experience
+          company="Floating Point Labs"
+          description="Build AI solutions that help Canadian organizations adopt AI while keeping their sensitive data in Canada and under their control. Lead product and design, taking projects from planning to delivery with no hand-offs."
+          location="Canada"
+          period="Mar 2026 - Current"
+          title="Co-Founder"
+        />
+        <Experience
           company="Woodside AI Venture Studio"
           description="Collaborated within a stealth AI venture studio to identify and engineer high-impact AI applications for different sectors. Focused on moving from 0-to-1 by building reusable foundational technology that accelerated the development of mission-critical, AI-native products."
-          location="Palo Alto"
+          location="Palo Alto (remote)"
           period="Jul 2024 – Mar 2026"
           stack={[
             "React",
@@ -106,7 +116,7 @@ function Experience({
   title,
 }: ExperienceProps) {
   return (
-    <div className="flex flex-col gap-4 py-6 border-b border-border last:border-b-0">
+    <div className="flex flex-col gap-4 py-6 print:gap-2 print:py-3 print:break-inside-avoid border-b border-border last:border-b-0">
       {/* Header row */}
       <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
         <div className="text-sm font-semibold text-fg leading-snug">
