@@ -1,6 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
+import {
+  EDUCATION,
+  EXPERIENCES,
+  LANGUAGES,
+  PROFILE,
+  SOFT_SKILLS,
+  STACK,
+} from "@/lib/resume";
+
 const SYSTEM_PROMPT = `You are a personal assistant on Long-Quan Hoang-Pham's portfolio website. Your job is to answer questions about Long-Quan's professional background, experience, and skills — and nothing else.
 
 If someone asks something unrelated to Long-Quan (e.g. general coding questions, politics, recipes, etc.), politely redirect them: explain you can only answer questions about Long-Quan's background.
@@ -9,61 +18,38 @@ Be concise, direct, and friendly. Answer in plain text — no markdown, no bulle
 
 --- ABOUT LONG-QUAN ---
 
-Full name: Long-Quan Hoang-Pham
-Role: Software Developer
-Location: Montréal, Canada
-Email: lq@long-quan.com
-GitHub: github.com/n0pan
-LinkedIn: linkedin.com/in/longquanhp
+Full name: ${PROFILE.name}
+Role: ${PROFILE.role}
+Location: ${PROFILE.location}
+Email: ${PROFILE.email}
+GitHub: github.com/${PROFILE.github}
+LinkedIn: linkedin.com/in/${PROFILE.linkedin}
 
 --- WORK EXPERIENCE ---
 
-Software Engineer @ Woodside AI Venture Studio, Palo Alto
-Jul 2024 – Mar 2026
-Collaborated within a stealth AI venture studio to identify and engineer high-impact AI applications for different sectors. Focused on moving from 0-to-1 by building reusable foundational technology that accelerated the development of mission-critical, AI-native products.
-Stack: React, NextJS, TypeScript, MCP, LiveKit, Supabase, PostgreSQL, OpenAI API
-
-Front-end Developer @ Taiga Motors, Montréal
-Jan 2022 – Jul 2024
-Led the design and integration of the front-end architecture across various applications, including the official Taiga mobile application.
-Stack: React Native, TypeScript, Svelte, Rollup, NextJS, Docker, AWS
-
-Tech Lead – Customer Experience @ Cook it, Montréal
-Feb 2021 – Jan 2022
-Led the customer experience team, acting as interim Scrum Master and Product Owner while improving hiring and onboarding processes.
-
-Front-end Developer @ Cook it, Montréal
-Dec 2017 – Feb 2021
-Joined when the tech department was just the CTO; helped build the platform from scratch and created reusable React components used throughout the platform.
-Stack: React, Meteor, Node, TypeScript, GraphQL, Docker
-
-Freelance Web Developer @ Spotlyne, Montréal
-Jan 2019 – Sep 2020
-Designed and integrated new pages based on client needs, created reusable React components, and spearheaded the migration of the application's design system to Ant Design.
-Stack: React, Meteor, Node, GraphQL
-
-Front-end Developer Intern @ DFuse, Montréal
-May 2017 – Aug 2017
-Designed and built UIs communicating with the database via Meteor DDP and WebSockets, and helped design mockups for the main platform.
-Stack: Meteor, HTML, SASS, Handlebars
+${EXPERIENCES.map(({ company, description, location, period, stack, title }) =>
+  [
+    `${title} @ ${company}, ${location}`,
+    period,
+    description,
+    stack && `Stack: ${stack.join(", ")}`,
+  ]
+    .filter(Boolean)
+    .join("\n"),
+).join("\n\n")}
 
 --- SKILLS ---
 
-Frontend: React, React Native, NextJS, TypeScript, Svelte, SASS
-Backend: Node, Meteor, GraphQL, Python, PostgreSQL, Supabase
-DevOps: Docker, AWS
-AI: OpenAI API, MCP, LiveKit
-Soft skills: Leadership, Organization, Communication, Teamwork, Adaptability, Problem solving, Active listening
+${STACK.map(({ group, items }) => `${group}: ${items.join(", ")}`).join("\n")}
+Soft skills: ${SOFT_SKILLS.join(", ")}
 
 --- EDUCATION ---
 
-Arts, Lettres & Communications (DEC) @ Collège Jean-de-Brébeuf, Montréal — 2011–2013
+${EDUCATION.degree} @ ${EDUCATION.school}, ${EDUCATION.location} — ${EDUCATION.period}
 
 --- LANGUAGES ---
 
-French: native
-English: native
-Vietnamese: fluent`;
+${LANGUAGES.map(({ lang, level }) => `${lang}: ${level}`).join("\n")}`;
 
 export interface ChatMessage {
   content: string;

@@ -1,6 +1,14 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import React from "react";
 
+import {
+  EDUCATION,
+  LANGUAGES,
+  PROFILE,
+  SOFT_SKILLS,
+  STACK,
+} from "@/lib/resume";
+
 import Accent from "./accent";
 
 interface PanelSectionProps {
@@ -8,34 +16,17 @@ interface PanelSectionProps {
   title: string;
 }
 
-const STACK = [
-  {
-    group: "Frontend",
-    items: [
-      "React",
-      "React Native",
-      "NextJS",
-      "TypeScript",
-      "Svelte",
-      "Astro, Tailwind",
-      "Shadcn",
-      "Mantine",
-    ],
-  },
-  {
-    group: "Backend",
-    items: ["Node", "Meteor", "GraphQL", "Python", "PostgreSQL", "Supabase"],
-  },
-  { group: "DevOps", items: ["Docker", "AWS", "Terraform"] },
-];
-
 const CONTACTS = [
-  { href: "mailto:lq@long-quan.com", Icon: Mail, label: "lq@long-quan.com" },
-  { href: "https://github.com/n0pan", Icon: Github, label: "github.com/n0pan" },
+  { href: `mailto:${PROFILE.email}`, Icon: Mail, label: PROFILE.email },
   {
-    href: "https://www.linkedin.com/in/longquanhp/",
+    href: `https://github.com/${PROFILE.github}`,
+    Icon: Github,
+    label: `github.com/${PROFILE.github}`,
+  },
+  {
+    href: `https://www.linkedin.com/in/${PROFILE.linkedin}/`,
     Icon: Linkedin,
-    label: "in/longquanhp",
+    label: `in/${PROFILE.linkedin}`,
   },
 ];
 
@@ -76,15 +67,17 @@ export default function Panel() {
           <div className="flex flex-col gap-1 print:flex-row print:items-baseline print:justify-between">
             <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
               <div className="text-sm print:text-xs font-semibold text-fg leading-snug m-0">
-                Arts, Lettres & Communications (DEC){" "}
+                {EDUCATION.degree}{" "}
                 <span className="text-fg-dim font-normal">@</span>{" "}
-                <Accent>Collège Jean-de-Brébeuf</Accent>
-                <span className="text-fg-dim font-normal">, Montréal</span>
+                <Accent>{EDUCATION.school}</Accent>
+                <span className="text-fg-dim font-normal">
+                  , {EDUCATION.location}
+                </span>
               </div>
             </div>
 
             <div className="text-xs text-yellow-dim tracking-wider uppercase shrink-0">
-              2011 - 2013
+              {EDUCATION.period}
             </div>
           </div>
         </PanelSection>
@@ -109,19 +102,14 @@ export default function Panel() {
         {/* Soft Skills */}
         <PanelSection title="Soft Skills">
           <p className="text-xs text-fg-muted leading-relaxed m-0">
-            Leadership &bull; Organization &bull; Communication &bull; Teamwork
-            &bull; Adaptability &bull; Problem solving &bull; Active listening
+            {SOFT_SKILLS.join(" \u2022 ")}
           </p>
         </PanelSection>
 
         {/* Languages */}
         <PanelSection title="Languages">
           <ul className="flex flex-col gap-2 text-xs print:flex-row print:gap-6">
-            {[
-              { lang: "French", level: "native" },
-              { lang: "English", level: "native" },
-              { lang: "Vietnamese", level: "fluent" },
-            ].map(({ lang, level }) => (
+            {LANGUAGES.map(({ lang, level }) => (
               <li
                 className="flex items-center justify-between print:gap-1.5"
                 key={lang}
